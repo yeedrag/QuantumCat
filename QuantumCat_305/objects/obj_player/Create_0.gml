@@ -41,8 +41,8 @@ function apply_movement(x_move_dir, y_move_dir){
 	// x movement
 	var x_move = x_move_dir * x_move_spd;
 	
-	if(place_meeting((x + x_move), y, obj_unmovables_parent)){
-		while(!place_meeting((x + sign(x_move_dir)), y, obj_unmovables_parent)){
+	if(place_meeting((x + x_move), y, obj_unmovable_parent)){
+		while(!place_meeting((x + sign(x_move_dir)), y, obj_unmovable_parent)){
 			x += sign(x_move_dir);
 		}
 		x_move = 0;
@@ -54,8 +54,8 @@ function apply_movement(x_move_dir, y_move_dir){
 	
 	y_move_spd += grav;
 
-	if(place_meeting(x, (y + y_move_spd), obj_unmovables_parent)){
-		while(!place_meeting(x, y + sign(y_move_spd), obj_unmovables_parent)){
+	if(place_meeting(x, (y + y_move_spd), obj_unmovable_parent)){
+		while(!place_meeting(x, y + sign(y_move_spd), obj_unmovable_parent)){
 			y += sign(y_move_spd);
 		}
 		y_move_spd = 0;
