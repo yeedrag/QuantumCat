@@ -61,7 +61,7 @@ function apply_movement(x_move_dir, y_move_dir){
 		y_move_spd = 0;
 	}
 	
-	var is_grounded = place_meeting(x,y+1,obj_floor);	
+	var is_grounded = place_meeting(x,y+1,obj_unmovable_parent);	
 	
 	if(is_grounded and y_move_dir == -1){
 		y_move_spd -= jump_height;

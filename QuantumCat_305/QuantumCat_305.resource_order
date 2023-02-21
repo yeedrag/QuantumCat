@@ -15,9 +15,13 @@
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"spr_player","order":6,"path":"folders/Sprites/spr_player.yy",},
+    {"name":"obj_cam","order":7,"path":"folders/Objects/obj_cam.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_view","order":1,"path":"objects/obj_view/obj_view.yy",},
     {"name":"obj_floor","order":3,"path":"objects/obj_floor/obj_floor.yy",},
+    {"name":"obj_floor2","order":4,"path":"objects/obj_floor2/obj_floor2.yy",},
+    {"name":"Sprite10","order":15,"path":"sprites/Sprite10/Sprite10.yy",},
     {"name":"Sprite9","order":2,"path":"sprites/Sprite9/Sprite9.yy",},
     {"name":"obj_unmovable_parent","order":1,"path":"objects/obj_unmovable_parent/obj_unmovable_parent.yy",},
     {"name":"obj_quantum_parent","order":2,"path":"objects/obj_quantum_parent/obj_quantum_parent.yy",},
