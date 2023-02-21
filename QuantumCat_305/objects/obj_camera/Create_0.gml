@@ -9,7 +9,7 @@ view_set_camera(0, myCam);
 // camera setting
 camera_set_view_size(myCam, c_width, c_height);
 camera_set_view_target(myCam, obj_view);
-camera_set_view_speed(myCam, 5, 5);
+camera_set_view_speed(myCam, -1, -1);
 camera_set_view_border(myCam, c_width/2, c_height/2);
 
 
