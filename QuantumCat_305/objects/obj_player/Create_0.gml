@@ -7,7 +7,7 @@ x_move_spd = 3;
 y_move_spd = 0;
 jump_height = 5; 
 grav = 0.3;
-
+depth = -1000
 /* TODO:
 	implement a check_collision function?
 	gravity might be replaced with environmental gravity when the system is done
