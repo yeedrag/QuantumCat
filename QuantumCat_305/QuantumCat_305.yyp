@@ -31,7 +31,7 @@
   "IncludedFiles": [],
   "isEcma": false,
   "MetaData": {
-    "IDEVersion": "2023.1.1.62",
+    "IDEVersion": "2023.1.0.58",
   },
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
@@ -44,6 +44,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":0,},
     {"id":{"name":"obj_unmovable_parent","path":"objects/obj_unmovable_parent/obj_unmovable_parent.yy",},"order":1,},
     {"id":{"name":"obj_quantum_parent","path":"objects/obj_quantum_parent/obj_quantum_parent.yy",},"order":2,},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":0,},
     {"id":{"name":"spr_player_lick_paw","path":"sprites/spr_player_lick_paw/spr_player_lick_paw.yy",},"order":2,},
     {"id":{"name":"spr_player_move","path":"sprites/spr_player_move/spr_player_move.yy",},"order":3,},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},"order":1,},
@@ -54,6 +55,7 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

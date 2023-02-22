@@ -25,6 +25,7 @@
     {"name":"Sprite9","order":2,"path":"sprites/Sprite9/Sprite9.yy",},
     {"name":"obj_unmovable_parent","order":1,"path":"objects/obj_unmovable_parent/obj_unmovable_parent.yy",},
     {"name":"obj_quantum_parent","order":2,"path":"objects/obj_quantum_parent/obj_quantum_parent.yy",},
+    {"name":"Room2","order":3,"path":"rooms/Room2/Room2.yy",},
     {"name":"spr_player_lick_paw","order":2,"path":"sprites/spr_player_lick_paw/spr_player_lick_paw.yy",},
     {"name":"spr_player_move","order":3,"path":"sprites/spr_player_move/spr_player_move.yy",},
     {"name":"spr_player_jump","order":1,"path":"sprites/spr_player_jump/spr_player_jump.yy",},

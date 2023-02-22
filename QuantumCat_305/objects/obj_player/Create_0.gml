@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description create the player
 // You can write your code in this editor
 // x vars
 x_move_spd = 3;
