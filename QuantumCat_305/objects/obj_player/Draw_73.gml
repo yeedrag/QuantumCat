@@ -1,21 +1,19 @@
-/// @description Insert description here
+// @description Insert description here
 // You can write your code in this editor
 draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); // bbox
-function shoot(lx, ly, rx, ry, start_x, start_y){
+function shoot(lx, ly, rx, ry, start_x, start_y){//trash
 	var midx = int64((lx+rx+1)/2), midy = int64((ly+ry+1)/2);
-	while(abs(rx-lx) > 1 || abs(ry-ly) > 1){
-		midx = int64((lx+rx+1)/2);
-		midy = int64((ly+ry+1)/2);
+	while(abs(rx-lx) > 2 || abs(ry-ly) > 2){
+		midx = int64((lx+rx)/2);
+		midy = int64((ly+ry)/2);
 		if(collision_line(start_x, start_y, midx, midy, obj_unmovable_parent, 0, 0)){
 			rx = midx - 1;
-			ry = midy - 1;
+			ry = midy - 1;//y座標反的好像會壞欸
 		} else {
 			lx = midx;
 			ly = midy;
 		}
 	}
-	show_debug_message(lx)
-	show_debug_message(rx)
 	draw_line(start_x, start_y, rx, ry);
 }
 
@@ -47,5 +45,5 @@ if(image_xscale == -1){
 	view_distance *= -1;
 }
 view_angle = pi/6;
-line_count = 1;
+line_count = 500;
 draw_sight(view_distance,view_angle,eye_x,eye_y,line_count); 
