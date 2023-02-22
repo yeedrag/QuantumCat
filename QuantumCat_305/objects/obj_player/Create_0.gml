@@ -8,6 +8,7 @@ y_move_spd = 0;
 jump_height = 5; 
 grav = 0.3;
 depth = -1000
+
 /* TODO:
 	implement a check_collision function?
 	gravity might be replaced with environmental gravity when the system is done
@@ -21,14 +22,16 @@ function update_sprite(x_move_dir, y_move_dir){
 		x_move_dir : the horizontal unit direction which the player is going to.
 		y_move_dir : the vertical unit direction which the player is going to.
 	*/	
-	show_debug_message(x_move_dir);
-	if(x_move_dir == 0 ){
+	//show_debug_message(x_move_dir);
+	if(x_move_dir == 0){
 		sprite_index = spr_player_idle;
 	} else {
 		sprite_index = spr_player_move;
 	}
 	
-	if(x_move_dir != 0) image_xscale = sign(x_move_dir) // flip sprite
+	if(x_move_dir != 0){
+		image_xscale = sign(x_move_dir) // flip sprite
+	}
 		
 }
 function apply_movement(x_move_dir, y_move_dir){
