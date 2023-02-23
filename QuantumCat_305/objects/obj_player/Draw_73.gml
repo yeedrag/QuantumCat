@@ -38,6 +38,7 @@ function draw_sight(view_distance, view_angle, start_x, start_y, line_count){
     	}
 }
 
+
 // temp code, depracate soon! 
 eye_x = x;
 eye_y = y - 18;
@@ -46,6 +47,14 @@ view_distance = 200;
 if(image_xscale == -1){
 	view_distance *= -1;
 }
+<<<<<<< Updated upstream
 view_angle = pi/6;
 line_count = 1;
 draw_sight(view_distance,view_angle,eye_x,eye_y,line_count); 
+=======
+view_angle = pi/2;
+
+
+
+draw_sight_v2(view_distance,view_angle,eye_x,eye_y,x_look,y_look); 
+>>>>>>> Stashed changes
