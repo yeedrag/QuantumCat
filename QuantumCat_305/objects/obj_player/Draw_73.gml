@@ -1,17 +1,34 @@
 // @description Insert description here
 // You can write your code in this editor
 draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); // bbox
-function shoot(lx, ly, rx, ry, start_x, start_y){//trash
+function swap(a,b){
+	var c=a;
+	a=b;
+	b=c;
+}
+function shoot(lx, ly, rx, ry, start_x, start_y){
+	if(lx>rx)swap(lx,rx);
+	if(ly>ry)swap(ly,ry);
+	show_debug_message(rx>lx)
+	show_debug_message(ry>ly)
 	var midx = int64((lx+rx+1)/2), midy = int64((ly+ry+1)/2);
-	while(abs(rx-lx) > 2 || abs(ry-ly) > 2){
+	while(abs(rx-lx) > 3 || abs(ry-ly) > 3){
 		midx = int64((lx+rx)/2);
 		midy = int64((ly+ry)/2);
 		if(collision_line(start_x, start_y, midx, midy, obj_unmovable_parent, 0, 0)){
 			rx = midx - 1;
-			ry = midy - 1;//y座標反的好像會壞欸
+			ry = midy - 1;
 		} else {
 			lx = midx;
 			ly = midy;
+		}
+	}
+	for(var i=int64(lx);i < int64(rx); i++){
+		for(var j=int64(ly);j < int64(ry); j++){
+			if(!collision_line(start_x, start_y, i, j, obj_unmovable_parent, 0, 0)){
+				rx=i;
+				ry=j;
+			} 
 		}
 	}
 	draw_line(start_x, start_y, rx, ry);
