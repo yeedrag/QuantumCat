@@ -62,11 +62,13 @@ function draw_sight_v2(view_distance, view_angle, start_x, start_y, facing_vecto
 	var bound_vec_a_y = cord_rotate(facing_vector_x, facing_vector_y, view_angle / 2)[1];
 	var bound_vec_b_x = cord_rotate(facing_vector_x, facing_vector_y, -view_angle / 2)[0];
 	var bound_vec_b_y = cord_rotate(facing_vector_x, facing_vector_y, -view_angle / 2)[1]; // is vector!
+	
 	draw_set_color(c_red);
 	draw_line(start_x, start_y, start_x + 30 * (bound_vec_a_x), start_y + 30 * (bound_vec_a_y));
 	draw_line(start_x, start_y, start_x + 30 * (bound_vec_b_x), start_y + 30 * (bound_vec_b_y));
 	draw_line(start_x, start_y, start_x + (30 * facing_vector_x), start_y + (30 * facing_vector_y));
 	draw_set_color(c_white);
+	
 	for(var i = 0; i < instance_number(obj_solid_parent); i++){
 		obj = instance_find(obj_solid_parent, i);
 		obj.is_seen = false;
@@ -74,7 +76,12 @@ function draw_sight_v2(view_distance, view_angle, start_x, start_y, facing_vecto
 		all_bbox_pair[1][0] = obj.bbox_bottom; all_bbox_pair[1][1] = obj.bbox_top;
 		for(var j = 0; j <= 1; j++){
 			for(var k = 0; k <= 1; k++){
-				
+				var line_angle = line_angle_diff(all_bbox_pair[0][j] - start_x, all_bbox_pair[1][k] - start_y, facing_vector_x, facing_vector_y);
+				if(line_angle < view_angle / 2){
+					// in sight;	
+					draw_line(start_x, start_y, all_bbox_pair[0][j], all_bbox_pair[1][k]);
+					
+				}
 			}
 		}
 	}
