@@ -49,5 +49,6 @@ if(image_xscale == -1){
 }
 view_angle = pi/2;
 
-draw_sight_v2(view_distance,view_angle,eye_x,eye_y,x_look,y_look); 
+draw_sight_v2(id, view_distance,view_angle,eye_x,eye_y,x_look,y_look); 
+
 
