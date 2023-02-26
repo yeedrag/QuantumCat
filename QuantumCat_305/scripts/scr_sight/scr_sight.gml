@@ -85,6 +85,8 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	
 	pt_vec_candidates = []; // array to put in point candidates to sort later, is vector though!
 	
+	lines_to_check = [];
+	
 	for(var i = 0; i < instance_number(obj_solid_parent); i++){ // finding candidates
 		
 		obj = instance_find(obj_solid_parent, i);
@@ -99,21 +101,30 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 					//draw_line(start_x, start_y, all_bbox_pair[0][j], all_bbox_pair[1][k]);
 					var pt = new vec_coord(all_bbox_pair[0][j] - start_x, all_bbox_pair[1][k] - start_y, obj);
 					array_push(pt_vec_candidates, pt);
+					var pt_r1 = new vec_coord(cord_rotate(pt._x, pt._y, 0.00001)[0], cord_rotate(pt._x, pt._y, 0.00001)[1]);
+					var pt_r2 = new vec_coord(cord_rotate(pt._x, pt._y, -0.00001)[0], cord_rotate(pt._x, pt._y, -0.00001)[1]);
+					array_push(pt_vec_candidates, pt_r1);
+					array_push(pt_vec_candidates, pt_r2);
 					delete pt;
+					delete pt_r1;
+					delete pt_r2;
 				}
 			}
 		}	
 	}
-
+	
+	array_push(pt_vec_candidates, vec_a);
+	array_push(pt_vec_candidates, vec_b); // two sides
 	// sort by angle
 	array_sort(pt_vec_candidates, function(elm_1, elm_2){
 		// sort angle from line a;
 		return sign(line_angle_diff(vec_a._x, vec_a._y, elm_2._x, elm_2._y) - line_angle_diff(vec_a._x , vec_a._y, elm_1._x, elm_1._y));
 	});
 	
-	//color = [c_aqua,c_black,c_blue,c_dkgray,c_fuchsia,c_gray,c_green,c_lime,c_ltgray,c_maroon,c_navy,c_olive,c_orange,c_purple,c_red,c_silver,c_teal,c_white,c_yellow]
-	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_line_colour(start_x, start_y, start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y, color[i], color[i]);
+	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_line(start_x, start_y, start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y);
+	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_text(start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y, i);
 	//show_debug_message(array_length(pt_vec_candidates))
+	
 	delete pt_vec_candidates;
 	delete vec_a;
 	delete vec_b;
