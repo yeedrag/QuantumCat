@@ -21,7 +21,7 @@
   "IncludedFiles": [],
   "isEcma": false,
   "MetaData": {
-    "IDEVersion": "2023.1.0.58",
+    "IDEVersion": "2023.1.1.62",
   },
   "resources": [
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":0,},
@@ -39,12 +39,12 @@
     {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},"order":2,},
     {"id":{"name":"spr_floor_tmp","path":"sprites/spr_floor_tmp/spr_floor_tmp.yy",},"order":1,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
-    {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},"order":0,},
+    {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},"order":7,},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},"order":1,},
     {"id":{"name":"spr_player_lick_paw","path":"sprites/spr_player_lick_paw/spr_player_lick_paw.yy",},"order":2,},
     {"id":{"name":"spr_player_move","path":"sprites/spr_player_move/spr_player_move.yy",},"order":3,},
     {"id":{"name":"spr_player_move_2","path":"sprites/spr_player_move_2/spr_player_move_2.yy",},"order":4,},
-    {"id":{"name":"obj_testing","path":"objects/obj_testing/obj_testing.yy",},"order":0,},
+    {"id":{"name":"obj_testing","path":"objects/obj_testing/obj_testing.yy",},"order":9,},
     {"id":{"name":"spr_player_sleep","path":"sprites/spr_player_sleep/spr_player_sleep.yy",},"order":5,},
   ],
   "RoomOrderNodes": [

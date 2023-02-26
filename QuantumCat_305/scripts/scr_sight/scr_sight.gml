@@ -97,7 +97,7 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 		
 		obj = instance_find(obj_solid_parent, i);
 		if(obj.sprite_index == Sprite11) {
-			show_debug_message(obj.image_angle);
+			//show_debug_message(obj.image_angle);
 			for(var j = 0; j < array_length(obj.vertices_pos); j++) {
 				draw_line(start_x,start_y, obj.x+obj.vertices_pos[j][0], obj.y+obj.vertices_pos[j][1])
 			}

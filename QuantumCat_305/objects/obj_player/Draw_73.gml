@@ -14,8 +14,8 @@ function shoot(lx, ly, rx, ry, start_x, start_y){
 			ly = midy;
 		}
 	}
-	show_debug_message(lx)
-	show_debug_message(rx)
+	//show_debug_message(lx)
+	//show_debug_message(rx)
 	draw_line(start_x, start_y, rx, ry);
 }
 
