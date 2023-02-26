@@ -20,10 +20,12 @@
     {"name":"Sprite10","order":2,"path":"sprites/Sprite10/Sprite10.yy",},
     {"name":"Sprite9","order":2,"path":"sprites/Sprite9/Sprite9.yy",},
     {"name":"spr_floor_tmp","order":1,"path":"sprites/spr_floor_tmp/spr_floor_tmp.yy",},
+    {"name":"Sprite11","order":7,"path":"sprites/Sprite11/Sprite11.yy",},
     {"name":"spr_player_jump","order":1,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"spr_player_lick_paw","order":2,"path":"sprites/spr_player_lick_paw/spr_player_lick_paw.yy",},
     {"name":"spr_player_move","order":3,"path":"sprites/spr_player_move/spr_player_move.yy",},
     {"name":"spr_player_move_2","order":4,"path":"sprites/spr_player_move_2/spr_player_move_2.yy",},
+    {"name":"obj_testing","order":9,"path":"objects/obj_testing/obj_testing.yy",},
     {"name":"spr_player_sleep","order":5,"path":"sprites/spr_player_sleep/spr_player_sleep.yy",},
   ],
 }

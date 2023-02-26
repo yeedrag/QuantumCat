@@ -63,6 +63,12 @@ function vec_coord(ppt_x, ppt_y, instance = NaN) constructor{
 	_id = instance; // to keep track of object because of sorting 
 }
 
+function get_vertices(obj) {
+	sprite = obj.sprite_index
+	vertices = []
+	
+}
+
 function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
 	
 	var face_vec = new vec_coord(facing_vector_x, facing_vector_y); // 也許可以改成輸入時就是vec_coord 
@@ -90,6 +96,14 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	for(var i = 0; i < instance_number(obj_solid_parent); i++){ // finding candidates
 		
 		obj = instance_find(obj_solid_parent, i);
+		if(obj.sprite_index == Sprite11) {
+			show_debug_message(obj.image_angle);
+			for(var j = 0; j < array_length(obj.vertices_pos); j++) {
+				draw_line(start_x,start_y, obj.x+obj.vertices_pos[j][0], obj.y+obj.vertices_pos[j][1])
+			}
+		}
+		
+			
 		all_bbox_pair[0][0] = obj.bbox_left; all_bbox_pair[0][1] = obj.bbox_right;
 		all_bbox_pair[1][0] = obj.bbox_bottom; all_bbox_pair[1][1] = obj.bbox_top;
 		
@@ -128,4 +142,7 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	delete pt_vec_candidates;
 	delete vec_a;
 	delete vec_b;
+	
+	
+	
 }

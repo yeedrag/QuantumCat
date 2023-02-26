@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_unmovable_parent",
-  "eventList": [],
+  "name": "obj_testing",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -10,8 +13,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "obj_solid_parent",
-    "path": "objects/obj_solid_parent/obj_solid_parent.yy",
+    "name": "obj_unmovable_parent",
+    "path": "objects/obj_unmovable_parent/obj_unmovable_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -28,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "Sprite11",
+    "path": "sprites/Sprite11/Sprite11.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
