@@ -88,7 +88,7 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	pt_vec_candidates = []; // array to put in point candidates to sort later, is vector though!
 	
 	lines_to_check = [];
-	
+
 	for(var i = 0; i < instance_number(obj_solid_parent); i++){ // finding candidates
 	
 		obj = instance_find(obj_solid_parent, i);
@@ -115,13 +115,13 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 				//draw_line(start_x, start_y, all_bbox_pair[0][j], all_bbox_pair[1][k]);
 				var pt = new vec_coord(obj.vertices_pos[j][0] + obj.x - start_x, obj.vertices_pos[j][1] + obj.y - start_y);
 				array_push(pt_vec_candidates, pt);
-				//var pt_r1 = new vec_coord(cord_rotate(pt._x, pt._y, 0.00001)[0], cord_rotate(pt._x, pt._y, 0.00001)[1]);
-				//var pt_r2 = new vec_coord(cord_rotate(pt._x, pt._y, -0.00001)[0], cord_rotate(pt._x, pt._y, -0.00001)[1]);
-				//array_push(pt_vec_candidates, pt_r1);
-				//array_push(pt_vec_candidates, pt_r2);
+				var pt_r1 = new vec_coord(cord_rotate(pt._x, pt._y, 0.0001)[0], cord_rotate(pt._x, pt._y, 0.0001)[1]);
+				var pt_r2 = new vec_coord(cord_rotate(pt._x, pt._y, -0.0001)[0], cord_rotate(pt._x, pt._y, -0.0001)[1]);
+				array_push(pt_vec_candidates, pt_r1);
+				array_push(pt_vec_candidates, pt_r2);
 				delete pt;
-				//delete pt_r1;
-				//delete pt_r2;		
+				delete pt_r1;
+				delete pt_r2;		
 			}
 		}
 	}
@@ -136,7 +136,7 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	draw_set_colour(c_white);
 	
 	
-	//array_push(pt_vec_candidates, vec_a);
+	array_push(pt_vec_candidates, vec_a);
 	array_push(pt_vec_candidates, vec_b); // two sides
 	// ------------------------------------------------------------------------------------------------- sort angle;
 	array_sort(pt_vec_candidates, function(elm_1, elm_2){
