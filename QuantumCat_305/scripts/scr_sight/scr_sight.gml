@@ -57,16 +57,12 @@ function collision_line_point(start_x, start_y, end_x, end_y, object, prec, notm
 	makes making vector easier!
 */
 
-function vec_coord(ppt_x, ppt_y, instance = NaN) constructor{
+function vec_coord(ppt_x, ppt_y, instance = NaN, origin_pt_x = NaN, origin_pt_y = NaN) constructor{
     _x = ppt_x;
     _y = ppt_y;
+	_org_x = origin_pt_x; // for lines/rays
+	_org_y = origin_pt_y;
 	_id = instance; // to keep track of object because of sorting 
-}
-
-function get_vertices(obj) {
-	sprite = obj.sprite_index
-	vertices = []
-	
 }
 
 function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
@@ -75,16 +71,16 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	
 	var bound_vec_a_x = cord_rotate(face_vec._x, face_vec._y, view_angle / 2)[0];
 	var bound_vec_a_y = cord_rotate(face_vec._x, face_vec._y, view_angle / 2)[1];
-	vec_a = new vec_coord(bound_vec_a_x, bound_vec_a_y);
+	vec_a = new vec_coord(bound_vec_a_x, bound_vec_a_y); // 下面那條
 	
 	var bound_vec_b_x = cord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[0];
 	var bound_vec_b_y = cord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[1]; // is vector!
-	vec_b = new vec_coord(bound_vec_b_x, bound_vec_b_y);
+	vec_b = new vec_coord(bound_vec_b_x, bound_vec_b_y); // 上面那條
 	
 	
 	draw_set_color(c_red);
 	draw_line(start_x, start_y, start_x + 30 * vec_a._x, start_y + 30 * vec_a._y);
-	draw_line(start_x, start_y, start_x + 30 *  vec_b._x, start_y + 30 * vec_b._x);
+	draw_line(start_x, start_y, start_x + 30 *  vec_b._x, start_y + 30 * vec_b._y);
 	draw_line(start_x, start_y, start_x + (30 * facing_vector_x), start_y + (30 * facing_vector_y));
 	draw_set_color(c_white);
 	
@@ -94,47 +90,66 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	lines_to_check = [];
 	
 	for(var i = 0; i < instance_number(obj_solid_parent); i++){ // finding candidates
-		
+	
 		obj = instance_find(obj_solid_parent, i);
-		if(obj.sprite_index == Sprite11) {
-			//show_debug_message(obj.image_angle);
-			for(var j = 0; j < array_length(obj.vertices_pos); j++) {
-				draw_line(start_x,start_y, obj.x+obj.vertices_pos[j][0], obj.y+obj.vertices_pos[j][1])
-			}
+		
+		// ------------------------------------------------------------------------------------------ putting every line in lines_to_check
+		for(var j = 1; j < obj.num_vertices; j++){
+			var line = new vec_coord(obj.vertices_pos[j-1][0] - obj.vertices_pos[j][0], obj.vertices_pos[j-1][1] - obj.vertices_pos[j][1], obj, obj.vertices_pos[j][0] + obj.x, obj.vertices_pos[j][1] + obj.y); 
+			array_push(lines_to_check,line);
+			delete line;
+		}
+		if(obj.num_vertices > 2){
+			var line = new vec_coord(obj.vertices_pos[obj.num_vertices - 1][0] - obj.vertices_pos[0][0], obj.vertices_pos[obj.num_vertices - 1][1] - obj.vertices_pos[0][1], obj, obj.vertices_pos[0][0] + obj.x, obj.vertices_pos[0][1] + obj.y) 
+			array_push(lines_to_check, line);
+			delete line;	
 		}
 		
-			
-		all_bbox_pair[0][0] = obj.bbox_left; all_bbox_pair[0][1] = obj.bbox_right;
-		all_bbox_pair[1][0] = obj.bbox_bottom; all_bbox_pair[1][1] = obj.bbox_top;
+		// -------------------------------------------------------------------------------------------
 		
-		for(var j = 0; j <= 1; j++){
-			for(var k = 0; k <= 1; k++){
-				var line_angle = line_angle_diff(all_bbox_pair[0][j] - start_x, all_bbox_pair[1][k] - start_y, facing_vector_x, facing_vector_y);
-				if(line_angle < view_angle / 2){
-					// in sight;	
-					//draw_line(start_x, start_y, all_bbox_pair[0][j], all_bbox_pair[1][k]);
-					var pt = new vec_coord(all_bbox_pair[0][j] - start_x, all_bbox_pair[1][k] - start_y, obj);
-					array_push(pt_vec_candidates, pt);
-					var pt_r1 = new vec_coord(cord_rotate(pt._x, pt._y, 0.00001)[0], cord_rotate(pt._x, pt._y, 0.00001)[1]);
-					var pt_r2 = new vec_coord(cord_rotate(pt._x, pt._y, -0.00001)[0], cord_rotate(pt._x, pt._y, -0.00001)[1]);
-					array_push(pt_vec_candidates, pt_r1);
-					array_push(pt_vec_candidates, pt_r2);
-					delete pt;
-					delete pt_r1;
-					delete pt_r2;
-				}
+		//-------------------------------------------------------------------------------------------- find ray candidates	
+		for(var j = 0; j < obj.num_vertices; j++){
+			var line_angle = line_angle_diff(obj.vertices_pos[j][0] + obj.x - start_x, obj.vertices_pos[j][1] + obj.y - start_y, facing_vector_x, facing_vector_y);
+			if(line_angle < view_angle / 2){
+				// in sight;	
+				//draw_line(start_x, start_y, all_bbox_pair[0][j], all_bbox_pair[1][k]);
+				var pt = new vec_coord(obj.vertices_pos[j][0] + obj.x - start_x, obj.vertices_pos[j][1] + obj.y - start_y);
+				array_push(pt_vec_candidates, pt);
+				//var pt_r1 = new vec_coord(cord_rotate(pt._x, pt._y, 0.00001)[0], cord_rotate(pt._x, pt._y, 0.00001)[1]);
+				//var pt_r2 = new vec_coord(cord_rotate(pt._x, pt._y, -0.00001)[0], cord_rotate(pt._x, pt._y, -0.00001)[1]);
+				//array_push(pt_vec_candidates, pt_r1);
+				//array_push(pt_vec_candidates, pt_r2);
+				delete pt;
+				//delete pt_r1;
+				//delete pt_r2;		
 			}
-		}	
+		}
 	}
 	
-	array_push(pt_vec_candidates, vec_a);
+	// for debug line
+	draw_set_colour(c_lime);
+	for(var z = 0; z < array_length(lines_to_check) ; z++){
+		var m = lines_to_check[z];
+		draw_line(m._org_x,m._org_y,m._org_x+m._x,m._org_y+m._y);	
+		
+	}
+	draw_set_colour(c_white);
+	
+	
+	//array_push(pt_vec_candidates, vec_a);
 	array_push(pt_vec_candidates, vec_b); // two sides
-	// sort by angle
+	// ------------------------------------------------------------------------------------------------- sort angle;
 	array_sort(pt_vec_candidates, function(elm_1, elm_2){
-		// sort angle from line a;
-		return sign(line_angle_diff(vec_a._x, vec_a._y, elm_2._x, elm_2._y) - line_angle_diff(vec_a._x , vec_a._y, elm_1._x, elm_1._y));
+		// sort angle from line b;
+		return sign(line_angle_diff(vec_b._x, vec_b._y, elm_2._x, elm_2._y) - line_angle_diff(vec_b._x , vec_b._y, elm_1._x, elm_1._y));
 	});
 	
+	for(var i = 0; i < array_length(pt_vec_candidates); i++){
+		var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[i], lines_to_check);
+		draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);
+	}
+
+
 	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_line(start_x, start_y, start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y);
 	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_text(start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y, i);
 	//show_debug_message(array_length(pt_vec_candidates))
@@ -142,7 +157,6 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	delete pt_vec_candidates;
 	delete vec_a;
 	delete vec_b;
-	
 	
 	
 }

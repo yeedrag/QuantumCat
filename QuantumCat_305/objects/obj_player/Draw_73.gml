@@ -38,8 +38,7 @@ function draw_sight(view_distance, view_angle, start_x, start_y, line_count){
     	}
 }
 
-
-// temp code, depracate soon! 
+// temp code, depracate soon!  
 eye_x = x;
 eye_y = y - 18;
 
