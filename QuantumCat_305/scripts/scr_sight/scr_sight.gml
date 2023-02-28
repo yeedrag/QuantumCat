@@ -144,11 +144,33 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 		return sign(line_angle_diff(vec_b._x, vec_b._y, elm_2._x, elm_2._y) - line_angle_diff(vec_b._x , vec_b._y, elm_1._x, elm_1._y));
 	});
 	//--------------------------------------------------------------------------------------------------- draw surface;
+	//if(surface_exists(fovsurface)) {
+		//draw_surface(fovsurface,32,767);
+	//}
+	//surface_set_target(fovsurface);
+	
+	//gpu_set_blendmode(bm_add);
+	//----------------------------------------------------------------------------------------------------
 	for(var i = 0; i < array_length(pt_vec_candidates); i++){
 		var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[i], lines_to_check);
-		draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);
+		if(inter_ret[1] >= 1000000) {
+			continue;
+		}
+		//draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
+		if(i >= 1) {
+			draw_set_alpha(0.8);
+			draw_set_color(c_black)
+			draw_rectangle(0,0,576,288,false);
+			draw_set_color(c_white)
+			draw_set_alpha(0.5);
+			draw_triangle( start_x, start_y, pre_inter_x, pre_inter_y, inter_ret[1], inter_ret[2], false);
+		}
+		pre_inter_x = inter_ret[1];
+		pre_inter_y = inter_ret[2];	
 	}
-
+	draw_set_alpha(1);
+	//gpu_set_blendenable(bm_normal);
+	//surface_reset_target();
 
 	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_line(start_x, start_y, start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y);
 	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_text(start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y, i);

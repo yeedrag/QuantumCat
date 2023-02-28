@@ -17,7 +17,7 @@ depth = -1000
 */
 
 //create fov surface
-
+fovsurface = surface_create(window_get_width(),window_get_height());
 
 
 function update_sprite(x_move_dir, y_move_dir){
