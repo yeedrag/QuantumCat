@@ -15,6 +15,11 @@ depth = -1000
 	maybe merge apply_movement with kb_check?
 	only implemented x movement for update sprite
 */
+
+//create fov surface
+
+
+
 function update_sprite(x_move_dir, y_move_dir){
 	/* 
 		Updates player sprite.

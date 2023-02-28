@@ -25,6 +25,7 @@
     {"name":"spr_player_lick_paw","order":2,"path":"sprites/spr_player_lick_paw/spr_player_lick_paw.yy",},
     {"name":"spr_player_move","order":3,"path":"sprites/spr_player_move/spr_player_move.yy",},
     {"name":"spr_player_move_2","order":4,"path":"sprites/spr_player_move_2/spr_player_move_2.yy",},
+    {"name":"draw_fov_surface","order":10,"path":"objects/draw_fov_surface/draw_fov_surface.yy",},
     {"name":"obj_testing","order":9,"path":"objects/obj_testing/obj_testing.yy",},
     {"name":"spr_player_sleep","order":5,"path":"sprites/spr_player_sleep/spr_player_sleep.yy",},
   ],

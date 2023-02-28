@@ -143,7 +143,7 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 		// sort angle from line b;
 		return sign(line_angle_diff(vec_b._x, vec_b._y, elm_2._x, elm_2._y) - line_angle_diff(vec_b._x , vec_b._y, elm_1._x, elm_1._y));
 	});
-	
+	//--------------------------------------------------------------------------------------------------- draw surface;
 	for(var i = 0; i < array_length(pt_vec_candidates); i++){
 		var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[i], lines_to_check);
 		draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);

@@ -21,7 +21,7 @@
   "IncludedFiles": [],
   "isEcma": false,
   "MetaData": {
-    "IDEVersion": "2023.1.1.62",
+    "IDEVersion": "2023.1.0.58",
   },
   "resources": [
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":0,},
@@ -44,6 +44,7 @@
     {"id":{"name":"spr_player_lick_paw","path":"sprites/spr_player_lick_paw/spr_player_lick_paw.yy",},"order":2,},
     {"id":{"name":"spr_player_move","path":"sprites/spr_player_move/spr_player_move.yy",},"order":3,},
     {"id":{"name":"spr_player_move_2","path":"sprites/spr_player_move_2/spr_player_move_2.yy",},"order":4,},
+    {"id":{"name":"draw_fov_surface","path":"objects/draw_fov_surface/draw_fov_surface.yy",},"order":0,},
     {"id":{"name":"obj_testing","path":"objects/obj_testing/obj_testing.yy",},"order":9,},
     {"id":{"name":"spr_player_sleep","path":"sprites/spr_player_sleep/spr_player_sleep.yy",},"order":5,},
   ],
