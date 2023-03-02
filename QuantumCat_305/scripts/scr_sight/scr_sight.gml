@@ -92,23 +92,15 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	for(var i = 0; i < instance_number(obj_solid_parent); i++){ // finding candidates
 	
 		obj = instance_find(obj_solid_parent, i);
-		
-		// ------------------------------------------------------------------------------------------ putting every line in lines_to_check
-		for(var j = 1; j < obj.num_vertices; j++){
-			var line = new vec_coord(obj.vertices_pos[j-1][0] - obj.vertices_pos[j][0], obj.vertices_pos[j-1][1] - obj.vertices_pos[j][1], obj, obj.vertices_pos[j][0] + obj.x, obj.vertices_pos[j][1] + obj.y); 
-			array_push(lines_to_check,line);
-			delete line;
-		}
-		if(obj.num_vertices > 2){
-			var line = new vec_coord(obj.vertices_pos[obj.num_vertices - 1][0] - obj.vertices_pos[0][0], obj.vertices_pos[obj.num_vertices - 1][1] - obj.vertices_pos[0][1], obj, obj.vertices_pos[0][0] + obj.x, obj.vertices_pos[0][1] + obj.y) 
-			array_push(lines_to_check, line);
-			delete line;	
-		}
-		
-		// -------------------------------------------------------------------------------------------
-		
+		var flag = false;
 		//-------------------------------------------------------------------------------------------- find ray candidates	
 		for(var j = 0; j < obj.num_vertices; j++){
+			var P_x = obj.vertices_pos[j][0] + obj.x 
+			var P_y = obj.vertices_pos[j][1] + obj.y
+			if(P_x < obj_camera.left_bound or  P_x > obj_camera.right_bound or P_y < obj_camera.top_bound or P_y > obj_camera.bottom_bound ) {
+				continue;
+			}		
+			flag = true;
 			var line_angle = line_angle_diff(obj.vertices_pos[j][0] + obj.x - start_x, obj.vertices_pos[j][1] + obj.y - start_y, facing_vector_x, facing_vector_y);
 			if(line_angle < view_angle / 2){
 				// in sight;	
@@ -124,6 +116,42 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 				delete pt_r2;		
 			}
 		}
+		
+		// ------------------------------------------------------------------------------------------ putting every line in lines_to_check
+		if(flag) {
+			for(var j = 1; j < obj.num_vertices; j++){
+			
+				var line = new vec_coord(obj.vertices_pos[j-1][0] - obj.vertices_pos[j][0], obj.vertices_pos[j-1][1] - obj.vertices_pos[j][1], obj, obj.vertices_pos[j][0] + obj.x, obj.vertices_pos[j][1] + obj.y); 
+				array_push(lines_to_check,line);
+				delete line;
+			}
+			if(obj.num_vertices > 2){
+				var line = new vec_coord(obj.vertices_pos[obj.num_vertices - 1][0] - obj.vertices_pos[0][0], obj.vertices_pos[obj.num_vertices - 1][1] - obj.vertices_pos[0][1], obj, obj.vertices_pos[0][0] + obj.x, obj.vertices_pos[0][1] + obj.y) 
+				array_push(lines_to_check, line);
+				delete line;	
+			}
+		}
+		
+		var line = new vec_coord(obj_camera.right_bound - obj_camera.left_bound, 0, NaN, obj_camera.left_bound, obj_camera.top_bound); 
+		array_push(lines_to_check,line);
+		delete line;
+	
+		var line = new vec_coord(0, obj_camera.bottom_bound - obj_camera.top_bound, NaN, obj_camera.right_bound, obj_camera.top_bound); 
+		array_push(lines_to_check,line);
+		delete line;
+	
+		var line = new vec_coord(-obj_camera.right_bound + obj_camera.left_bound, 0, NaN, obj_camera.right_bound, obj_camera.bottom_bound); 
+		array_push(lines_to_check,line);
+		delete line;
+	
+		var line = new vec_coord(0, obj_camera.top_bound - obj_camera.bottom_bound, NaN, obj_camera.left_bound, obj_camera.bottom_bound); 
+		array_push(lines_to_check,line);
+		delete line;
+	
+	
+		// -------------------------------------------------------------------------------------------
+		
+		
 	}
 	
 	// for debug line
@@ -157,10 +185,8 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 			continue;
 		}
 		//draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
+		//draw_circle(inter_ret[1], inter_ret[2],5,false);
 		if(i >= 1) {
-			draw_set_alpha(0.8);
-			draw_set_color(c_black)
-			draw_rectangle(0,0,576,288,false);
 			draw_set_color(c_white)
 			draw_set_alpha(0.5);
 			draw_triangle( start_x, start_y, pre_inter_x, pre_inter_y, inter_ret[1], inter_ret[2], false);
