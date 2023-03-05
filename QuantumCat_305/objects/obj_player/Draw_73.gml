@@ -46,7 +46,7 @@ view_distance = 200;
 if(image_xscale == -1){
 	view_distance *= -1;
 }
-view_angle = pi/2;
+view_angle = pi/3;
 
 draw_sight_v2(id, view_distance,view_angle,eye_x,eye_y,x_look,y_look); 
 
