@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-x = obj_player.x;
-y = obj_player.y;
+x = mouse_x;
+y = mouse_y;
+//x = obj.player.x
+//y = obj.player.y

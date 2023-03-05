@@ -1,0 +1,482 @@
+You are using YYP Maker v1.1.5, released in 14-08-2022
+
+
+
+[23-02-2023 20:51:08] Initialized GameMaker Project: QuantumCat_305.yyp
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/animcurves
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/extensions
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/fonts
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/notes
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects
+[23-02-2023 20:51:08] Checking obj_view
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_view
+[23-02-2023 20:51:08] Checking obj_unmovable_parent
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_unmovable_parent
+[23-02-2023 20:51:08] Checking obj_solid_parent
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_solid_parent
+[23-02-2023 20:51:08] Checking obj_quantum_parent
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_quantum_parent
+[23-02-2023 20:51:08] Checking obj_player
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_player
+[23-02-2023 20:51:08] Checking obj_floor2
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor2
+[23-02-2023 20:51:08] Checking obj_floor
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor
+[23-02-2023 20:51:08] Checking obj_camera
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_camera
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_camera
+[23-02-2023 20:51:08] Checking obj_camera.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_camera/obj_camera.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_camera/obj_camera.yy
+[23-02-2023 20:51:08] Par: "folders/Objects/obj_cam" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_camera/obj_camera.yy"
+[23-02-2023 20:51:08] Found Object: obj_camera
+[23-02-2023 20:51:08] Checking Create_0.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor
+[23-02-2023 20:51:08] Checking obj_floor.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor/obj_floor.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor/obj_floor.yy
+[23-02-2023 20:51:08] Par: "folders/Objects" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor/obj_floor.yy"
+[23-02-2023 20:51:08] Found Object: obj_floor
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor2
+[23-02-2023 20:51:08] Checking obj_floor2.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor2/obj_floor2.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor2/obj_floor2.yy
+[23-02-2023 20:51:08] Par: "folders/Objects" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_floor2/obj_floor2.yy"
+[23-02-2023 20:51:08] Found Object: obj_floor2
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_player
+[23-02-2023 20:51:08] Checking Step_0.gml
+[23-02-2023 20:51:08] Checking obj_player.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_player/obj_player.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_player/obj_player.yy
+[23-02-2023 20:51:08] Par: "folders/Objects" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_player/obj_player.yy"
+[23-02-2023 20:51:08] Found Object: obj_player
+[23-02-2023 20:51:08] Checking Draw_73.gml
+[23-02-2023 20:51:08] Checking Create_0.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_quantum_parent
+[23-02-2023 20:51:08] Checking obj_quantum_parent.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_quantum_parent/obj_quantum_parent.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_quantum_parent/obj_quantum_parent.yy
+[23-02-2023 20:51:08] Par: "folders/Objects" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_quantum_parent/obj_quantum_parent.yy"
+[23-02-2023 20:51:08] Found Object: obj_quantum_parent
+[23-02-2023 20:51:08] Checking Create_0.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_solid_parent
+[23-02-2023 20:51:08] Checking obj_solid_parent.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_solid_parent/obj_solid_parent.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_solid_parent/obj_solid_parent.yy
+[23-02-2023 20:51:08] Par: "folders/Objects" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_solid_parent/obj_solid_parent.yy"
+[23-02-2023 20:51:08] Found Object: obj_solid_parent
+[23-02-2023 20:51:08] Checking Create_0.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_unmovable_parent
+[23-02-2023 20:51:08] Checking obj_unmovable_parent.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_unmovable_parent/obj_unmovable_parent.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_unmovable_parent/obj_unmovable_parent.yy
+[23-02-2023 20:51:08] Par: "folders/Objects" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_unmovable_parent/obj_unmovable_parent.yy"
+[23-02-2023 20:51:08] Found Object: obj_unmovable_parent
+[23-02-2023 20:51:08] Checking Create_0.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_view
+[23-02-2023 20:51:08] Checking Step_0.gml
+[23-02-2023 20:51:08] Checking obj_view.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_view/obj_view.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_view/obj_view.yy
+[23-02-2023 20:51:08] Par: "folders/Objects/obj_cam" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/objects/obj_view/obj_view.yy"
+[23-02-2023 20:51:08] Found Object: obj_view
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options
+[23-02-2023 20:51:08] Checking windows
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/windows
+[23-02-2023 20:51:08] Checking operagx
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/operagx
+[23-02-2023 20:51:08] Checking main
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/main
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/main
+[23-02-2023 20:51:08] Checking options_main.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/main/options_main.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/main/options_main.yy
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/operagx
+[23-02-2023 20:51:08] Checking options_operagx.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/operagx/options_operagx.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/operagx/options_operagx.yy
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/windows
+[23-02-2023 20:51:08] Checking options_windows.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/windows/options_windows.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/options/windows/options_windows.yy
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/paths
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms
+[23-02-2023 20:51:08] Checking Room1
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Room1
+[23-02-2023 20:51:08] Checking Level_0
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Level_0
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Level_0
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Room1
+[23-02-2023 20:51:08] Checking Room1.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Room1/Room1.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Room1/Room1.yy
+[23-02-2023 20:51:08] Par: "folders/Rooms" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/rooms/Room1/Room1.yy"
+[23-02-2023 20:51:08] Found Room: Room1
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts
+[23-02-2023 20:51:08] Checking scr_sight
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_sight
+[23-02-2023 20:51:08] Checking scr_math
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_math
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_math
+[23-02-2023 20:51:08] Checking scr_math.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_math/scr_math.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_math/scr_math.yy
+[23-02-2023 20:51:08] Par: "folders/Scripts" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_math/scr_math.yy"
+[23-02-2023 20:51:08] Found Script: scr_math
+[23-02-2023 20:51:08] Checking scr_math.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_sight
+[23-02-2023 20:51:08] Checking scr_sight.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_sight/scr_sight.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_sight/scr_sight.yy
+[23-02-2023 20:51:08] Par: "folders/Scripts" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/scripts/scr_sight/scr_sight.yy"
+[23-02-2023 20:51:08] Found Script: scr_sight
+[23-02-2023 20:51:08] Checking scr_sight.gml
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sequences
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/shaders
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sounds
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites
+[23-02-2023 20:51:08] Checking spr_player_sleep
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep
+[23-02-2023 20:51:08] Checking spr_player_move_2
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2
+[23-02-2023 20:51:08] Checking spr_player_move
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move
+[23-02-2023 20:51:08] Checking spr_player_lick_paw
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw
+[23-02-2023 20:51:08] Checking spr_player_jump
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump
+[23-02-2023 20:51:08] Checking spr_player_idle
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle
+[23-02-2023 20:51:08] Checking spr_floor_tmp
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp
+[23-02-2023 20:51:08] Checking Sprite9
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9
+[23-02-2023 20:51:08] Checking Sprite10
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10
+[23-02-2023 20:51:08] Checking Sprite10.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/Sprite10.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/Sprite10.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/Sprite10.yy"
+[23-02-2023 20:51:08] Found Sprite: Sprite10
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/layers
+[23-02-2023 20:51:08] Checking 0de9bb4a-a093-406e-9c9b-76e1d9805bbf.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/layers
+[23-02-2023 20:51:08] Checking 0de9bb4a-a093-406e-9c9b-76e1d9805bbf
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/layers/0de9bb4a-a093-406e-9c9b-76e1d9805bbf
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite10/layers/0de9bb4a-a093-406e-9c9b-76e1d9805bbf
+[23-02-2023 20:51:08] Checking 7bbf940d-6b57-403e-8fe0-3e1209d6060f.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9
+[23-02-2023 20:51:08] Checking Sprite9.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/Sprite9.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/Sprite9.yy
+[23-02-2023 20:51:08] Par: "folders/Rooms" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/Sprite9.yy"
+[23-02-2023 20:51:08] Found Sprite: Sprite9
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/layers
+[23-02-2023 20:51:08] Checking e45917d8-d89b-4880-bbc5-94a14ec8e657.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/layers
+[23-02-2023 20:51:08] Checking e45917d8-d89b-4880-bbc5-94a14ec8e657
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/layers/e45917d8-d89b-4880-bbc5-94a14ec8e657
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/Sprite9/layers/e45917d8-d89b-4880-bbc5-94a14ec8e657
+[23-02-2023 20:51:08] Checking e553a7dc-3729-4d23-aadb-700c1fcc999e.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp
+[23-02-2023 20:51:08] Checking spr_floor_tmp.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/spr_floor_tmp.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/spr_floor_tmp.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/spr_floor_tmp.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_floor_tmp
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/layers
+[23-02-2023 20:51:08] Checking d96e43d1-3e62-4999-8053-68db26f33a88.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/layers
+[23-02-2023 20:51:08] Checking d96e43d1-3e62-4999-8053-68db26f33a88
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/layers/d96e43d1-3e62-4999-8053-68db26f33a88
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_floor_tmp/layers/d96e43d1-3e62-4999-8053-68db26f33a88
+[23-02-2023 20:51:08] Checking dba03a1e-ddbb-4939-b455-d4596b7b0ebd.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle
+[23-02-2023 20:51:08] Checking spr_player_idle.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/spr_player_idle.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/spr_player_idle.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites/spr_player" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/spr_player_idle.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_player_idle
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers
+[23-02-2023 20:51:08] Checking f5155c83-c1c7-4748-83f8-92e9373dc84a.png
+[23-02-2023 20:51:08] Checking e97c245c-676b-402f-bdf8-31a2dbe1e159.png
+[23-02-2023 20:51:08] Checking dae69bfc-6dbd-4985-b0b8-8a0a487e701d.png
+[23-02-2023 20:51:08] Checking d3af8c23-7758-43a4-9bf4-d9e8cdea5e03.png
+[23-02-2023 20:51:08] Checking 1b55e315-1a92-4547-baa0-39a0e74c847d.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers
+[23-02-2023 20:51:08] Checking f5155c83-c1c7-4748-83f8-92e9373dc84a
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/f5155c83-c1c7-4748-83f8-92e9373dc84a
+[23-02-2023 20:51:08] Checking e97c245c-676b-402f-bdf8-31a2dbe1e159
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/e97c245c-676b-402f-bdf8-31a2dbe1e159
+[23-02-2023 20:51:08] Checking dae69bfc-6dbd-4985-b0b8-8a0a487e701d
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/dae69bfc-6dbd-4985-b0b8-8a0a487e701d
+[23-02-2023 20:51:08] Checking d3af8c23-7758-43a4-9bf4-d9e8cdea5e03
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/d3af8c23-7758-43a4-9bf4-d9e8cdea5e03
+[23-02-2023 20:51:08] Checking 1b55e315-1a92-4547-baa0-39a0e74c847d
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/1b55e315-1a92-4547-baa0-39a0e74c847d
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/1b55e315-1a92-4547-baa0-39a0e74c847d
+[23-02-2023 20:51:08] Checking 7e079e1a-871f-41bc-a972-6815248593db.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/d3af8c23-7758-43a4-9bf4-d9e8cdea5e03
+[23-02-2023 20:51:08] Checking 50115ce7-7117-4833-a223-0efde9b014d1.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/dae69bfc-6dbd-4985-b0b8-8a0a487e701d
+[23-02-2023 20:51:08] Checking 7e079e1a-871f-41bc-a972-6815248593db.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/e97c245c-676b-402f-bdf8-31a2dbe1e159
+[23-02-2023 20:51:08] Checking 7e079e1a-871f-41bc-a972-6815248593db.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_idle/layers/f5155c83-c1c7-4748-83f8-92e9373dc84a
+[23-02-2023 20:51:08] Checking 7e079e1a-871f-41bc-a972-6815248593db.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump
+[23-02-2023 20:51:08] Checking spr_player_jump.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/spr_player_jump.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/spr_player_jump.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites/spr_player" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/spr_player_jump.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_player_jump
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers
+[23-02-2023 20:51:08] Checking dd970db7-4999-4646-97fd-6ef8dfd3706b.png
+[23-02-2023 20:51:08] Checking b24a7f6d-26dc-4a2c-bab2-49d857534527.png
+[23-02-2023 20:51:08] Checking 73130cdd-5b7a-47f9-850a-75bca9cc044b.png
+[23-02-2023 20:51:08] Checking 5b2d6ba7-b06f-48a4-ac17-4a269c5733aa.png
+[23-02-2023 20:51:08] Checking 5076531a-068e-4531-a161-110555b3d7b1.png
+[23-02-2023 20:51:08] Checking 4128c551-466f-4273-8612-e44116e9faf2.png
+[23-02-2023 20:51:08] Checking 283e92c2-a2e9-4b3f-a054-60da5d7194b2.png
+[23-02-2023 20:51:08] Checking 1f9aed67-7838-4078-9f15-094b1a2d2174.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers
+[23-02-2023 20:51:08] Checking dd970db7-4999-4646-97fd-6ef8dfd3706b
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/dd970db7-4999-4646-97fd-6ef8dfd3706b
+[23-02-2023 20:51:08] Checking b24a7f6d-26dc-4a2c-bab2-49d857534527
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/b24a7f6d-26dc-4a2c-bab2-49d857534527
+[23-02-2023 20:51:08] Checking 73130cdd-5b7a-47f9-850a-75bca9cc044b
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/73130cdd-5b7a-47f9-850a-75bca9cc044b
+[23-02-2023 20:51:08] Checking 5b2d6ba7-b06f-48a4-ac17-4a269c5733aa
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/5b2d6ba7-b06f-48a4-ac17-4a269c5733aa
+[23-02-2023 20:51:08] Checking 5076531a-068e-4531-a161-110555b3d7b1
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/5076531a-068e-4531-a161-110555b3d7b1
+[23-02-2023 20:51:08] Checking 4128c551-466f-4273-8612-e44116e9faf2
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/4128c551-466f-4273-8612-e44116e9faf2
+[23-02-2023 20:51:08] Checking 283e92c2-a2e9-4b3f-a054-60da5d7194b2
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/283e92c2-a2e9-4b3f-a054-60da5d7194b2
+[23-02-2023 20:51:08] Checking 1f9aed67-7838-4078-9f15-094b1a2d2174
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/1f9aed67-7838-4078-9f15-094b1a2d2174
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/1f9aed67-7838-4078-9f15-094b1a2d2174
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/283e92c2-a2e9-4b3f-a054-60da5d7194b2
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/4128c551-466f-4273-8612-e44116e9faf2
+[23-02-2023 20:51:08] Checking 80a75e06-1a50-4ff6-8ce7-3ab4c3fb4348.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/5076531a-068e-4531-a161-110555b3d7b1
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/5b2d6ba7-b06f-48a4-ac17-4a269c5733aa
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/73130cdd-5b7a-47f9-850a-75bca9cc044b
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/b24a7f6d-26dc-4a2c-bab2-49d857534527
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_jump/layers/dd970db7-4999-4646-97fd-6ef8dfd3706b
+[23-02-2023 20:51:08] Checking 4383c5e5-1d1c-47f4-bf8e-9843e3b315c5.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw
+[23-02-2023 20:51:08] Checking spr_player_lick_paw.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/spr_player_lick_paw.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/spr_player_lick_paw.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites/spr_player" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/spr_player_lick_paw.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_player_lick_paw
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers
+[23-02-2023 20:51:08] Checking fb996920-741d-48de-98d5-900f8eb04327.png
+[23-02-2023 20:51:08] Checking c3ecedd7-049f-4a5a-9da0-1d9e9d10165a.png
+[23-02-2023 20:51:08] Checking 81506c88-13df-4df7-9219-2cbb3aa9fdd0.png
+[23-02-2023 20:51:08] Checking 6a0bec9b-3728-46a3-9c6a-9decccaf382f.png
+[23-02-2023 20:51:08] Checking 4503554f-b7e1-491a-997b-478353d00049.png
+[23-02-2023 20:51:08] Checking 25944a2c-5bfa-4335-9ea1-1abc8e85bdb8.png
+[23-02-2023 20:51:08] Checking 1fba2cd1-a625-4262-8e66-a3ab293d31cc.png
+[23-02-2023 20:51:08] Checking 19fce346-a866-4fa0-aa5e-87ae499d6b1f.png
+[23-02-2023 20:51:08] Checking 0bce74ce-4f47-4a1c-b531-a9d77b273306.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers
+[23-02-2023 20:51:08] Checking fb996920-741d-48de-98d5-900f8eb04327
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/fb996920-741d-48de-98d5-900f8eb04327
+[23-02-2023 20:51:08] Checking c3ecedd7-049f-4a5a-9da0-1d9e9d10165a
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/c3ecedd7-049f-4a5a-9da0-1d9e9d10165a
+[23-02-2023 20:51:08] Checking 81506c88-13df-4df7-9219-2cbb3aa9fdd0
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/81506c88-13df-4df7-9219-2cbb3aa9fdd0
+[23-02-2023 20:51:08] Checking 6a0bec9b-3728-46a3-9c6a-9decccaf382f
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/6a0bec9b-3728-46a3-9c6a-9decccaf382f
+[23-02-2023 20:51:08] Checking 4503554f-b7e1-491a-997b-478353d00049
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/4503554f-b7e1-491a-997b-478353d00049
+[23-02-2023 20:51:08] Checking 25944a2c-5bfa-4335-9ea1-1abc8e85bdb8
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/25944a2c-5bfa-4335-9ea1-1abc8e85bdb8
+[23-02-2023 20:51:08] Checking 1fba2cd1-a625-4262-8e66-a3ab293d31cc
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/1fba2cd1-a625-4262-8e66-a3ab293d31cc
+[23-02-2023 20:51:08] Checking 19fce346-a866-4fa0-aa5e-87ae499d6b1f
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/19fce346-a866-4fa0-aa5e-87ae499d6b1f
+[23-02-2023 20:51:08] Checking 0bce74ce-4f47-4a1c-b531-a9d77b273306
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/0bce74ce-4f47-4a1c-b531-a9d77b273306
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/0bce74ce-4f47-4a1c-b531-a9d77b273306
+[23-02-2023 20:51:08] Checking d67bba5e-1e6a-4a75-a008-d2cdae028a61.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/19fce346-a866-4fa0-aa5e-87ae499d6b1f
+[23-02-2023 20:51:08] Checking 5ef82da8-57ab-4b9d-afc8-1bf9c46a65bd.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/1fba2cd1-a625-4262-8e66-a3ab293d31cc
+[23-02-2023 20:51:08] Checking d67bba5e-1e6a-4a75-a008-d2cdae028a61.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/25944a2c-5bfa-4335-9ea1-1abc8e85bdb8
+[23-02-2023 20:51:08] Checking b4660af3-66a7-4ca8-a22f-3c586074f7b1.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/4503554f-b7e1-491a-997b-478353d00049
+[23-02-2023 20:51:08] Checking d67bba5e-1e6a-4a75-a008-d2cdae028a61.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/6a0bec9b-3728-46a3-9c6a-9decccaf382f
+[23-02-2023 20:51:08] Checking b4660af3-66a7-4ca8-a22f-3c586074f7b1.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/81506c88-13df-4df7-9219-2cbb3aa9fdd0
+[23-02-2023 20:51:08] Checking d67bba5e-1e6a-4a75-a008-d2cdae028a61.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/c3ecedd7-049f-4a5a-9da0-1d9e9d10165a
+[23-02-2023 20:51:08] Checking b4660af3-66a7-4ca8-a22f-3c586074f7b1.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_lick_paw/layers/fb996920-741d-48de-98d5-900f8eb04327
+[23-02-2023 20:51:08] Checking b4660af3-66a7-4ca8-a22f-3c586074f7b1.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move
+[23-02-2023 20:51:08] Checking spr_player_move.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/spr_player_move.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/spr_player_move.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites/spr_player" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/spr_player_move.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_player_move
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers
+[23-02-2023 20:51:08] Checking e94b811a-8b62-4aaf-b0de-4c14137950e8.png
+[23-02-2023 20:51:08] Checking c9e00e90-c18f-4954-8bee-7fcddaca1cf2.png
+[23-02-2023 20:51:08] Checking 8e70e8fe-34ab-4aa4-9b83-a7afabd5d541.png
+[23-02-2023 20:51:08] Checking 78ba19ad-e8b0-4bbb-8042-9a8d8753b067.png
+[23-02-2023 20:51:08] Checking 67a744d2-2910-4e6e-9872-5fd50c43e088.png
+[23-02-2023 20:51:08] Checking 25d65346-a743-4b16-b0db-7164952307d6.png
+[23-02-2023 20:51:08] Checking 1f1c95c7-65bc-4b11-9143-674610a3a20f.png
+[23-02-2023 20:51:08] Checking 0da1484c-5fa2-4bb4-9920-439aa93321c6.png
+[23-02-2023 20:51:08] Checking 0463c644-d9bf-4209-929e-fc4991dec3cd.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers
+[23-02-2023 20:51:08] Checking e94b811a-8b62-4aaf-b0de-4c14137950e8
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/e94b811a-8b62-4aaf-b0de-4c14137950e8
+[23-02-2023 20:51:08] Checking c9e00e90-c18f-4954-8bee-7fcddaca1cf2
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/c9e00e90-c18f-4954-8bee-7fcddaca1cf2
+[23-02-2023 20:51:08] Checking 8e70e8fe-34ab-4aa4-9b83-a7afabd5d541
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/8e70e8fe-34ab-4aa4-9b83-a7afabd5d541
+[23-02-2023 20:51:08] Checking 78ba19ad-e8b0-4bbb-8042-9a8d8753b067
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/78ba19ad-e8b0-4bbb-8042-9a8d8753b067
+[23-02-2023 20:51:08] Checking 67a744d2-2910-4e6e-9872-5fd50c43e088
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/67a744d2-2910-4e6e-9872-5fd50c43e088
+[23-02-2023 20:51:08] Checking 25d65346-a743-4b16-b0db-7164952307d6
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/25d65346-a743-4b16-b0db-7164952307d6
+[23-02-2023 20:51:08] Checking 1f1c95c7-65bc-4b11-9143-674610a3a20f
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/1f1c95c7-65bc-4b11-9143-674610a3a20f
+[23-02-2023 20:51:08] Checking 0da1484c-5fa2-4bb4-9920-439aa93321c6
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/0da1484c-5fa2-4bb4-9920-439aa93321c6
+[23-02-2023 20:51:08] Checking 0463c644-d9bf-4209-929e-fc4991dec3cd
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/0463c644-d9bf-4209-929e-fc4991dec3cd
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/0463c644-d9bf-4209-929e-fc4991dec3cd
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/0da1484c-5fa2-4bb4-9920-439aa93321c6
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/1f1c95c7-65bc-4b11-9143-674610a3a20f
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/25d65346-a743-4b16-b0db-7164952307d6
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/67a744d2-2910-4e6e-9872-5fd50c43e088
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/78ba19ad-e8b0-4bbb-8042-9a8d8753b067
+[23-02-2023 20:51:08] Checking 605d9239-40a9-4fcd-a6c3-f06ac2032458.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/8e70e8fe-34ab-4aa4-9b83-a7afabd5d541
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/c9e00e90-c18f-4954-8bee-7fcddaca1cf2
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move/layers/e94b811a-8b62-4aaf-b0de-4c14137950e8
+[23-02-2023 20:51:08] Checking fa2dee9d-919a-4fe6-9df0-f9552b991faa.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2
+[23-02-2023 20:51:08] Checking spr_player_move_2.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/spr_player_move_2.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/spr_player_move_2.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites/spr_player" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/spr_player_move_2.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_player_move_2
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers
+[23-02-2023 20:51:08] Checking f7ab51f2-528e-44e7-8752-d66d21161732.png
+[23-02-2023 20:51:08] Checking d3293482-3192-4add-91c7-d3ba71ab5941.png
+[23-02-2023 20:51:08] Checking a9efe2d6-1511-4d1e-bbf7-8b7613aa89b2.png
+[23-02-2023 20:51:08] Checking 9b7605de-846d-491f-8854-e8770531c077.png
+[23-02-2023 20:51:08] Checking 6bf6518d-4ea9-4931-a12f-107fb8e3132b.png
+[23-02-2023 20:51:08] Checking 64c88eaa-67a3-4974-9822-ee11db7d252f.png
+[23-02-2023 20:51:08] Checking 26648abc-9924-4d68-99c8-5e9e83837582.png
+[23-02-2023 20:51:08] Checking 060ad237-9d1f-4f30-88b2-67010dddd605.png
+[23-02-2023 20:51:08] Checking 018d1fa9-db79-47ea-b5a0-05fc6330b15e.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers
+[23-02-2023 20:51:08] Checking f7ab51f2-528e-44e7-8752-d66d21161732
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/f7ab51f2-528e-44e7-8752-d66d21161732
+[23-02-2023 20:51:08] Checking d3293482-3192-4add-91c7-d3ba71ab5941
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/d3293482-3192-4add-91c7-d3ba71ab5941
+[23-02-2023 20:51:08] Checking a9efe2d6-1511-4d1e-bbf7-8b7613aa89b2
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/a9efe2d6-1511-4d1e-bbf7-8b7613aa89b2
+[23-02-2023 20:51:08] Checking 9b7605de-846d-491f-8854-e8770531c077
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/9b7605de-846d-491f-8854-e8770531c077
+[23-02-2023 20:51:08] Checking 6bf6518d-4ea9-4931-a12f-107fb8e3132b
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/6bf6518d-4ea9-4931-a12f-107fb8e3132b
+[23-02-2023 20:51:08] Checking 64c88eaa-67a3-4974-9822-ee11db7d252f
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/64c88eaa-67a3-4974-9822-ee11db7d252f
+[23-02-2023 20:51:08] Checking 26648abc-9924-4d68-99c8-5e9e83837582
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/26648abc-9924-4d68-99c8-5e9e83837582
+[23-02-2023 20:51:08] Checking 060ad237-9d1f-4f30-88b2-67010dddd605
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/060ad237-9d1f-4f30-88b2-67010dddd605
+[23-02-2023 20:51:08] Checking 018d1fa9-db79-47ea-b5a0-05fc6330b15e
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/018d1fa9-db79-47ea-b5a0-05fc6330b15e
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/018d1fa9-db79-47ea-b5a0-05fc6330b15e
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/060ad237-9d1f-4f30-88b2-67010dddd605
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/26648abc-9924-4d68-99c8-5e9e83837582
+[23-02-2023 20:51:08] Checking 67d4e045-4783-49c8-a8bc-16265967ec86.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/64c88eaa-67a3-4974-9822-ee11db7d252f
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/6bf6518d-4ea9-4931-a12f-107fb8e3132b
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/9b7605de-846d-491f-8854-e8770531c077
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/a9efe2d6-1511-4d1e-bbf7-8b7613aa89b2
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/d3293482-3192-4add-91c7-d3ba71ab5941
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_move_2/layers/f7ab51f2-528e-44e7-8752-d66d21161732
+[23-02-2023 20:51:08] Checking 9c769c8f-5cb3-4ee6-ab19-7f19248b2f89.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep
+[23-02-2023 20:51:08] Checking spr_player_sleep.yy
+[23-02-2023 20:51:08] Parsing C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/spr_player_sleep.yy
+[23-02-2023 20:51:08] Reading C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/spr_player_sleep.yy
+[23-02-2023 20:51:08] Par: "folders/Sprites/spr_player" at dir: "C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/spr_player_sleep.yy"
+[23-02-2023 20:51:08] Found Sprite: spr_player_sleep
+[23-02-2023 20:51:08] Checking layers
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers
+[23-02-2023 20:51:08] Checking ad997331-0e5e-46fb-ab0b-698293468830.png
+[23-02-2023 20:51:08] Checking 7b7c8a20-995c-4207-b6cc-d55cc84d3ce7.png
+[23-02-2023 20:51:08] Checking 5a831ad1-dace-464d-9908-b4d5d02c363d.png
+[23-02-2023 20:51:08] Checking 568e7a54-b499-461b-a373-725f9717769e.png
+[23-02-2023 20:51:08] Checking 5145e066-d119-4d8d-811b-bf4ce3f01ee0.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers
+[23-02-2023 20:51:08] Checking ad997331-0e5e-46fb-ab0b-698293468830
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/ad997331-0e5e-46fb-ab0b-698293468830
+[23-02-2023 20:51:08] Checking 7b7c8a20-995c-4207-b6cc-d55cc84d3ce7
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/7b7c8a20-995c-4207-b6cc-d55cc84d3ce7
+[23-02-2023 20:51:08] Checking 5a831ad1-dace-464d-9908-b4d5d02c363d
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/5a831ad1-dace-464d-9908-b4d5d02c363d
+[23-02-2023 20:51:08] Checking 568e7a54-b499-461b-a373-725f9717769e
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/568e7a54-b499-461b-a373-725f9717769e
+[23-02-2023 20:51:08] Checking 5145e066-d119-4d8d-811b-bf4ce3f01ee0
+[23-02-2023 20:51:08] Directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/5145e066-d119-4d8d-811b-bf4ce3f01ee0
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/5145e066-d119-4d8d-811b-bf4ce3f01ee0
+[23-02-2023 20:51:08] Checking e18c5e5d-42b4-4178-b710-333b3ba6e662.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/568e7a54-b499-461b-a373-725f9717769e
+[23-02-2023 20:51:08] Checking 9553022d-90d5-47b5-b102-d4e55eadeb1d.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/5a831ad1-dace-464d-9908-b4d5d02c363d
+[23-02-2023 20:51:08] Checking e18c5e5d-42b4-4178-b710-333b3ba6e662.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/7b7c8a20-995c-4207-b6cc-d55cc84d3ce7
+[23-02-2023 20:51:08] Checking e18c5e5d-42b4-4178-b710-333b3ba6e662.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/sprites/spr_player_sleep/layers/ad997331-0e5e-46fb-ab0b-698293468830
+[23-02-2023 20:51:08] Checking e18c5e5d-42b4-4178-b710-333b3ba6e662.png
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/tilesets
+[23-02-2023 20:51:08] Current parent directory: C:/Users/yeedrag/Documents/GitHub/QuantumCat/QuantumCat_305/timelines
+[23-02-2023 20:51:08] Moving files to trash...
+[23-02-2023 20:51:08] Files yeeted successfully!
+[23-02-2023 20:51:08] Generating YYP...
+[23-02-2023 20:51:08] QuantumCat_305.yyp created successfully!
