@@ -4,9 +4,13 @@
   "name": "TileSet1",
   "autoTileSets": [],
   "macroPageTiles": {
-    "SerialiseHeight": 0,
-    "SerialiseWidth": 0,
-    "TileSerialiseData": [],
+    "SerialiseHeight": 9,
+    "SerialiseWidth": 7,
+    "TileCompressedData": [
+      -63,
+      0,
+    ],
+    "TileDataFormat": 1,
   },
   "out_columns": 15,
   "out_tilehborder": 2,
@@ -16,8 +20,8 @@
     "path": "folders/TileSets.yy",
   },
   "spriteId": {
-    "name": "Sprite12",
-    "path": "sprites/Sprite12/Sprite12.yy",
+    "name": "spr_tiles",
+    "path": "sprites/spr_tiles/spr_tiles.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {
