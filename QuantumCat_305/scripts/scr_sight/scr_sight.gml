@@ -1,61 +1,9 @@
-function collision_line_point(start_x, start_y, end_x, end_y, object, prec, notme){
-	/*
-		Calculates the point that the line collides with the object.
-		Params:
-			start_x : starting x of the line.
-			start_y : staring y of the line.
-			end_x   : ending x of the line.
-			end_y   : ending y of the line.
-			object  : the object that the line wants to check collision.
-			prec    : whether to use precise collision or not.
-			notme  : whether the calling instance should be excluded or not.
-		Returns:
-			An array with length 3, the instance ID, the x cord for 
-			the collide point and the y cord for the collide point. Note 
-			that if there are no collision, x and y would be set as end_x, 
-			end_y, and the object ID would be noone.
-	*/
-	var collide_object = collision_line(start_x, start_y, end_x, end_y, object, prec, notme);
-	var line_length = point_distance(start_x, start_y, end_x, end_y);
-	
-	var collide_x = end_x;
-	var collide_y = end_y;
-	
-	if(collide_object != noone){
-		var p0 = 0;
-		var p1 = 1;
-		repeat(ceil(log2(line_length)) + 1){
-			var mag = p0 + (p1 - p0) * 0.5;
-			var fx = start_x + (end_x - start_x) * mag; // far x
-			var fy = start_y + (end_y - start_y) * mag; // far y
-			var cx = start_x + (end_x - start_x) * p0; // close x
-			var cy = start_y + (end_y - start_y) * p0; // close y 
-			var check_collide = collision_line(cx, cy, fx, fy, object, prec, notme)
-			if(check_collide != noone){
-				collide_object = check_collide;
-				collide_x = fx;
-				collide_y = fy;
-				p1 = mag;
-			} else {
-				p0 = mag;	
-			}
-		}
+function draw_all_vertices(){
+	for(var i = 0; i < instance_number(obj_vertex); i++){
+		obj = instance_find(obj_vertex,i);
+		obj.image_alpha = 1;
 	}
-	
-	var ret;
-	ret[0] = collide_object;
-	ret[1] = collide_x;
-	ret[2] = collide_y;
-	
-	return ret;
 }
-
-/*
-	about facing_x and facing_y:
-	x: right is 1, left is -1;
-	y: down is 1, up is -1;
-	makes making vector easier!
-*/
 
 function vec_coord(ppt_x, ppt_y, instance = NaN, origin_pt_x = NaN, origin_pt_y = NaN) constructor{
     _x = ppt_x;
@@ -64,7 +12,12 @@ function vec_coord(ppt_x, ppt_y, instance = NaN, origin_pt_x = NaN, origin_pt_y 
 	_org_y = origin_pt_y;
 	_id = instance; // to keep track of object because of sorting 
 }
-
+/*
+	about facing_x and facing_y:
+	x: right is 1, left is -1;
+	y: down is 1, up is -1;
+	makes making vector easier!
+*/
 function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
 	
 	var face_vec = new vec_coord(facing_vector_x, facing_vector_y); // 也許可以改成輸入時就是vec_coord 
@@ -121,34 +74,36 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 		}
 	}
 	
-	array_push(pt_vec_candidates, vec_a);
-	array_push(pt_vec_candidates, vec_b); // two sides
+	array_push(pt_vec_candidates, vec_a); 
 	// ------------------------------------------------------------------------------------------------- sort angle;
 	array_sort(pt_vec_candidates, function(elm_1, elm_2){
 		// sort angle from line b;
 		return sign(line_angle_diff(vec_b._x, vec_b._y, elm_2._x, elm_2._y) - line_angle_diff(vec_b._x , vec_b._y, elm_1._x, elm_1._y));
 	});
 	
+	array_push(pt_vec_candidates, vec_b); // two sides
 	
 	var cand_length = array_length(pt_vec_candidates);
+	
+	pre_inter_x = -9999999;
+	pre_inter_y = -9999999;
+	
 	for(var i = 0; i < cand_length; i++){
 		var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[i], lines_to_check);
 		var inter_obj = inter_ret[0];
-		show_debug_message(inter_obj)
 		if(inter_ret[1] >= 1000000) {
 			continue;
 		}
 		if(inter_obj != NaN){
 			inter_obj.is_seen = true;	
 		}
-		//draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
-		if(i >= 1) {
-			draw_set_alpha(0.8);
-			draw_set_color(c_black)
-			draw_rectangle(0,0,576,288,false);
+		draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
+		//draw_text(inter_ret[1], inter_ret[2], i+1);
+		draw_circle(inter_ret[1], inter_ret[2], 1, false);
+		if(i >= 1 and pre_inter_x != -9999999) {
 			draw_set_color(c_white)
 			draw_set_alpha(0.5);
-			draw_triangle( start_x, start_y, pre_inter_x, pre_inter_y, inter_ret[1], inter_ret[2], false);
+			draw_triangle(start_x, start_y, pre_inter_x, pre_inter_y, inter_ret[1], inter_ret[2], false);
 		}
 		pre_inter_x = inter_ret[1];
 		pre_inter_y = inter_ret[2];	

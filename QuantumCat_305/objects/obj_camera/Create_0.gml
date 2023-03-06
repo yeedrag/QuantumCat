@@ -22,3 +22,6 @@ min_view_x = 0;
 min_view_y = 735;
 max_view_x = 639-c_width;
 max_view_y = 1087-c_height;
+
+
+draw_all_vertices();
