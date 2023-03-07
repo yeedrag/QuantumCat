@@ -31,7 +31,6 @@ function get_closest_intersection(start_x, start_y, ray, seg_candidates){
 	var closest_seg = NaN;
 	var closest_dis_x = 99999999;
 	var closest_dis_y = 99999999;
-
 	for(var i = 0; i < array_length(seg_candidates); i++){
 		var seg = seg_candidates[i];	
 		if(ray._y * seg._x - ray._x * seg._y == 0) continue; // parallel
@@ -43,7 +42,7 @@ function get_closest_intersection(start_x, start_y, ray, seg_candidates){
 		var pt_y = start_y + ray._y * t; // intersection point;
 		var dis = point_distance(start_x, start_y, pt_x, pt_y);
 		if(dis <= point_distance(start_x, start_y, closest_dis_x, closest_dis_y)){
-			closest_seg = seg; // to check if is seen
+			closest_seg = seg._id; // to check if is seen
 			closest_dis_x = pt_x;
 			closest_dis_y = pt_y;
 		}
