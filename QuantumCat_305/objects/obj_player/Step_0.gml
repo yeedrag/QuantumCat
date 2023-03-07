@@ -25,7 +25,7 @@ if(look_left or look_right){
 }
 if(look_down or look_up) y_look = look_down - look_up;
 
-apply_movement(x_move_dir, y_move_dir)
+apply_movement(x_move_dir, y_move_dir, x_look, y_look)
 
 
 

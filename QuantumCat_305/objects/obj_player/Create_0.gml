@@ -24,7 +24,7 @@ fovsurface = surface_create(window_get_width(),window_get_height());
 frame_cntr_1 = 0;
 frame_cntr_2 = 0;
 
-function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump = 0){
+function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump, x_look, y_look){
 	/* 
 		Updates player sprite.
 		Params:
@@ -34,7 +34,26 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump 
 		y_move_spd : gives the current speed of the player.
 	*/	
 	
+	var x_look_str = "";
+	var y_look_str = "";
+
+	
+	if(x_look != 0){
+		if(sign(x_look) == sign(image_xscale)){
+			x_look_str = "r";
+		} else {
+			x_look_str = "l";
+		}
+	} else if (y_look == 0){
+		x_look_str = (image_xscale == 1) ? "r" : "l";
+	}
+	
+	if(y_look != 0) y_look_str = (y_look == -1) ? "u" : "d";
+	
+	var idle_sprite = asset_get_index("spr_player_idle_" + y_look_str + x_look_str);
+	
 	in_y_jumping = false;
+	
 	if(is_jump == false and is_grounded == true and (sprite_index != spr_player_jump or (sprite_index == spr_player_jump and image_index = 6))){
 		in_y_jumping = false;	
 	} else {
@@ -91,7 +110,7 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump 
 	// x
 	if(in_y_jumping == false){
 		if(x_move_dir == 0){ // x animations only preform when no y animations
-			sprite_index = spr_player_idle;
+			sprite_index = idle_sprite;
 		} else {
 			sprite_index = spr_player_move;
 		}	
@@ -101,15 +120,18 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump 
 		image_xscale = sign(x_move_dir) // flip sprite
 	}
 }
+
 cayote_time = 10; // frames for cayote time
 cayote_cntr = cayote_time; 
 
-function apply_movement(x_move_dir, y_move_dir){
+function apply_movement(x_move_dir, y_move_dir, x_look, y_look){
 	/* 
 		Applys movement to player.
 		Params:
 		x_move_dir : the horizontal unit direction which the player is going to.
 		y_move_dir : the vertical unit direction which the player is going to.
+		x_look :
+		y_look : WIP
 	*/
 	// x movement
 	var x_move = x_move_dir * x_move_spd;
@@ -159,5 +181,5 @@ function apply_movement(x_move_dir, y_move_dir){
 	y += y_move_spd;
 
 	//update sprite
-	update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump);
+	update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump, x_look, y_look);
 }

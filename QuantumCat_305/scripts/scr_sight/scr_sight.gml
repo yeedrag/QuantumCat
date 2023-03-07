@@ -100,11 +100,13 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 		//draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
 		//draw_text(inter_ret[1], inter_ret[2], i+1);
 		//draw_circle(inter_ret[1], inter_ret[2], 1, false);
+		/*
 		if(i >= 1 and pre_inter_x != -9999999) {
 			draw_set_color(c_white)
 			draw_set_alpha(0.5);
 			draw_triangle(start_x, start_y, pre_inter_x, pre_inter_y, inter_ret[1], inter_ret[2], false);
 		}
+		*/
 		pre_inter_x = inter_ret[1];
 		pre_inter_y = inter_ret[2];	
 	}
