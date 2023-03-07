@@ -101,6 +101,9 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump 
 		image_xscale = sign(x_move_dir) // flip sprite
 	}
 }
+cayote_time = 10; // frames for cayote time
+cayote_cntr = cayote_time; 
+
 function apply_movement(x_move_dir, y_move_dir){
 	/* 
 		Applys movement to player.
@@ -133,10 +136,24 @@ function apply_movement(x_move_dir, y_move_dir){
 	}
 	
 	var is_grounded = place_meeting(x,y+1,obj_unmovable_parent);	
-	
-	if(is_grounded and y_move_dir == -1){
-		y_move_spd -= jump_height;
-		is_jump = true;
+	if(y_move_dir == -1){ // dealing with jump w cayote time
+		if(is_grounded == true){
+			y_move_spd -= jump_height;
+			show_debug_message("spd:{0}",y_move_spd)
+			is_jump = true;
+			cayote_cntr = 0;	
+		} else if(cayote_cntr > 0){
+			y_move_spd = -jump_height;
+			show_debug_message("spd:{0}",y_move_spd)
+			is_jump = true;
+			cayote_cntr = 0;				
+		} else {
+			cayote_cntr -= 1;	
+		}	
+	} else if(is_grounded == true){
+		cayote_cntr = cayote_time;	
+	} else {
+		cayote_cntr -= 1;
 	}
 	
 	y += y_move_spd;
