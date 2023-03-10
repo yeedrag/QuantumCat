@@ -51,6 +51,7 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump,
 	if(y_look != 0) y_look_str = (y_look == -1) ? "u" : "d";
 	
 	var idle_sprite = asset_get_index("spr_player_idle_" + y_look_str + x_look_str);
+	var move_sprite = asset_get_index("spr_player_move_" + y_look_str + x_look_str);
 	
 	in_y_jumping = false;
 	
@@ -112,7 +113,7 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump,
 		if(x_move_dir == 0){ // x animations only preform when no y animations
 			sprite_index = idle_sprite;
 		} else {
-			sprite_index = spr_player_move;
+			sprite_index = move_sprite;
 		}	
 	}
 	
