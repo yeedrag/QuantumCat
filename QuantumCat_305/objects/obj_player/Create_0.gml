@@ -52,19 +52,32 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump,
 	
 	var idle_sprite = asset_get_index("spr_player_idle_" + y_look_str + x_look_str);
 	var move_sprite = asset_get_index("spr_player_move_" + y_look_str + x_look_str);
+	var jump_sprite = asset_get_index("spr_player_jump_" + y_look_str + x_look_str);
+	
+	
 	
 	in_y_jumping = false;
 	
-	if(is_jump == false and is_grounded == true and (sprite_index != spr_player_jump or (sprite_index == spr_player_jump and image_index = 6))){
+	if(is_jump == false and is_grounded == true and (sprite_index != jump_sprite or (sprite_index == jump_sprite and image_index = 6))){
 		in_y_jumping = false;	
 	} else {
 		in_y_jumping = true;
 	}
 	
+	
+	if(in_y_jumping == false){
+		if(x_move_dir == 0){ // x animations only preform when no y animations
+			sprite_index = idle_sprite;
+		} else {
+			sprite_index = move_sprite;
+		}	
+	} else {
+		sprite_index = jump_sprite;	
+	}
+	
 	// Y
 	if(is_jump == true){
 		image_speed = 0; 
-		sprite_index = spr_player_jump;	
 		image_index = 0;
 		frame_cntr_1 = 0;
 		frame_cntr_2 = 0;
@@ -89,7 +102,7 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump,
 			frame_cntr_1 = 0;
 		}
 		frame_cntr_1 += 1;
-	} else if(sprite_index == spr_player_jump){
+	} else if(sprite_index == jump_sprite){
 		// grounded animations;	
 		if(frame_cntr_2 == 3){			
 			switch(image_index){
@@ -109,14 +122,6 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, is_jump,
 	}
 	
 	// x
-	if(in_y_jumping == false){
-		if(x_move_dir == 0){ // x animations only preform when no y animations
-			sprite_index = idle_sprite;
-		} else {
-			sprite_index = move_sprite;
-		}	
-	}
-	
 	if(x_move_dir != 0){
 		image_xscale = sign(x_move_dir) // flip sprite
 	}
