@@ -103,6 +103,7 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, pressed_
 		image_xscale = sign(x_move_dir) // flip sprite
 	}
 }
+
 cayote_time = 10; // frames for cayote time
 cayote_cntr = cayote_time; 
 

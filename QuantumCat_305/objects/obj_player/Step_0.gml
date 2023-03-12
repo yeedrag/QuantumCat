@@ -25,7 +25,18 @@ if(look_left or look_right){
 }
 if(look_down or look_up) y_look = look_down - look_up;
 
-apply_movement(x_move_dir, y_move_dir, x_look, y_look)
+eye_x = obj_player.x;
+eye_y = obj_player.y - 18;
+
+view_distance = 200;
+if(image_xscale == -1){
+	view_distance *= -1;
+}
+view_angle = pi/3;
+
+sight_polygons = get_sight_polygon(id, view_distance,view_angle,eye_x,eye_y,x_look,y_look); 
+
+apply_movement(x_move_dir, y_move_dir, x_look, y_look);
 
 
 

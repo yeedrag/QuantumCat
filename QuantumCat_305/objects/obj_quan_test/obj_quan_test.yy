@@ -1,11 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_quantum_parent",
+  "name": "obj_quan_test",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -14,8 +12,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "obj_solid_parent",
-    "path": "objects/obj_solid_parent/obj_solid_parent.yy",
+    "name": "obj_quantum_parent",
+    "path": "objects/obj_quantum_parent/obj_quantum_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_quan_test",
+    "path": "sprites/spr_quan_test/spr_quan_test.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

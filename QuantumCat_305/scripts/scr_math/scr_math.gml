@@ -28,7 +28,7 @@ function vec_coord(ppt_x, ppt_y, instance = NaN, origin_pt_x, origin_pt_y) const
 }
 */
 function get_closest_intersection(start_x, start_y, ray, seg_candidates){
-	var closest_seg = NaN;
+	var closest_seg = noone;
 	var closest_dis_x = 99999999;
 	var closest_dis_y = 99999999;
 	for(var i = 0; i < array_length(seg_candidates); i++){
