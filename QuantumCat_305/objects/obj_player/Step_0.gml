@@ -23,8 +23,13 @@ if(look_left or look_right){
 } else if(look_down or look_up){
 	x_look = 0;
 }
+if(x_look == 0 and !(look_down or look_up)){
+	x_look = 1 * image_xscale;	
+}
 if(look_down or look_up) y_look = look_down - look_up;
-
+if(x_look == 0 and !(look_down or look_up) or (look_down and look_up)){
+	x_look = 1 * image_xscale;	
+}
 eye_x = obj_player.x;
 eye_y = obj_player.y - 18;
 

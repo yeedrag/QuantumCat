@@ -27,10 +27,10 @@ function vec_coord(ppt_x, ppt_y, instance = NaN, origin_pt_x, origin_pt_y) const
 	_id = instance; // to keep track of object because of sorting 
 }
 */
-function get_closest_intersection(start_x, start_y, ray, seg_candidates){
-	var closest_seg = noone;
-	var closest_dis_x = 99999999;
-	var closest_dis_y = 99999999;
+function get_closest_intersection(start_x, start_y, ray, seg_candidates, close_dis_x = 99999999, close_dis_y = 99999999, close_seg = noone){
+	var closest_seg = close_seg;
+	var closest_dis_x = close_dis_x;
+	var closest_dis_y = close_dis_y;
 	for(var i = 0; i < array_length(seg_candidates); i++){
 		var seg = seg_candidates[i];	
 		if(ray._y * seg._x - ray._x * seg._y == 0) continue; // parallel
@@ -53,4 +53,15 @@ function get_closest_intersection(start_x, start_y, ray, seg_candidates){
 	ret[2] = closest_dis_y;
 	return ret;
 	
+}
+
+function array_shuffle(_array) {
+	var _len = array_length(_array), _last = 0, _i = 0;
+	while(_len) {
+		_i = irandom(--_len);
+		_last = _array[_len];
+		_array[_len] = _array[_i];
+		_array[_i] = _last;
+	}
+	return _array;
 }

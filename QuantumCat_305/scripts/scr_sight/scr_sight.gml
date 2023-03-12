@@ -5,13 +5,12 @@ function draw_all_vertices(){
 	}
 }
 
-function vec_coord(ppt_x, ppt_y, instance = noone, origin_pt_x = NaN, origin_pt_y = NaN, q_bound_idx = NaN) constructor{
+function vec_coord(ppt_x, ppt_y, instance = noone, origin_pt_x = NaN, origin_pt_y = NaN, quantum_idx = NaN) constructor{
     _x = ppt_x;
     _y = ppt_y;
+	_id = instance; // to keep track of object because of sorting 
 	_org_x = origin_pt_x; // for lines/rays
 	_org_y = origin_pt_y;
-	_id = instance; // to keep track of object because of sorting 
-	_bound_idx = q_bound_idx; // for quantum bounds only!!
 }
 /*
 	about facing_x and facing_y:
@@ -19,28 +18,6 @@ function vec_coord(ppt_x, ppt_y, instance = noone, origin_pt_x = NaN, origin_pt_
 	y: down is 1, up is -1;
 	makes making vector easier!
 */
-function load_quantum_bounds(){
-	var quantum_bounds = []
-	for(var i = 0; i < instance_number(obj_quantum_parent); i++){ // finding candidates
-		obj = instance_find(obj_quantum_parent, i);
-		var num_vertices = obj.num_vertices;
-		for(var sp = 0; sp < array_length(self.spawns); sp++){
-			sp_x = spawns[sp][0];
-			sp_y = spawns[sp][1];
-			for(var j = 1; j < num_vertices; j++){
-				var line = new vec_coord(obj.vertices_pos[j-1][0] - obj.vertices_pos[j][0], obj.vertices_pos[j-1][1] - obj.vertices_pos[j][1], obj, obj.vertices_pos[j][0] + sp_x, obj.vertices_pos[j][1] + sp_y, sp); 
-				array_push(quantum_bounds,line);
-				delete line;
-			}
-			if(num_vertices > 2){
-				var line = new vec_coord(obj.vertices_pos[obj.num_vertices - 1][0] - obj.vertices_pos[0][0], obj.vertices_pos[obj.num_vertices - 1][1] - obj.vertices_pos[0][1], obj, obj.vertices_pos[0][0] + sp_x, obj.vertices_pos[0][1] + sp_y, sp);
-				array_push(quantum_bounds, line);
-				delete line;	
-			}		
-		}
-	}
-	return quantum_bounds;
-}
 
 function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
 	
@@ -80,7 +57,7 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 		// -------------------------------------------------------------------------------------------
 		
 		//-------------------------------------------------------------------------------------------- find ray candidates	
-		for(var j = 0; j <num_vertices; j++){
+		for(var j = 0; j < num_vertices; j++){
 			var line_angle = line_angle_diff(obj.vertices_pos[j][0] + obj.x - start_x, obj.vertices_pos[j][1] + obj.y - start_y, facing_vector_x, facing_vector_y);
 			if(line_angle < view_angle / 2){
 				// in sight;	
@@ -96,7 +73,6 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 			}
 		}
 	}
-	
 	array_push(pt_vec_candidates, vec_a); 
 	// ------------------------------------------------------------------------------------------------- sort angle;
 	array_sort(pt_vec_candidates, function(elm_1, elm_2){
@@ -110,20 +86,66 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 
 	var ret = [];
 	
+	
 	for(var i = 0; i < cand_length; i++){
 		var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[i], lines_to_check);
         if(inter_ret[1] >= 1000000) {
             continue;
         }
-		show_debug_message(inter_ret[0])
         if(inter_ret[0] != noone){
             inter_ret[0].is_seen = true;
         }
 		array_push(ret, inter_ret);
 	}
+	
+	
+	// deal with quantum tp candidates
+	
+	for(var i = 0; i < instance_number(obj_quantum_parent); i++){ 
+		obj = instance_find(obj_quantum_parent, i);	
+		for(var sp = 0; sp < array_length(obj.spawns); sp++){
+			var flag0 = false;
+			var flag1 = false;
+			var num_vertices = obj.num_vertices;
+			for(var j = 0; j < num_vertices; j++){
+				var abs_pos_x = obj.vertices_pos[j][0] + obj.spawns[sp][0];
+				var abs_pos_y = obj.vertices_pos[j][1] + obj.spawns[sp][1]
+				var line_angle = line_angle_diff(abs_pos_x - start_x, abs_pos_y - start_y, facing_vector_x, facing_vector_y);
+				if(line_angle < view_angle / 2){
+					// in sight;	
+					var pt = new vec_coord(abs_pos_x - start_x, abs_pos_y - start_y);
+					var inter_ret = get_closest_intersection(start_x, start_y, pt, lines_to_check, abs_pos_x, abs_pos_y, obj);
+					if(inter_ret[0] == obj){ // the rays closest is itself
+						// this spawn is not valid;
+						flag0 = 1;
+					} 
+				}	
+			}
+			var qbounds = obj.bounds;
+			for(var j = 0; j < cand_length; j++){ 
+				var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[j], qbounds[sp]);
+		        if(inter_ret[1] >= 1000000) {
+		            continue;
+		        }
+				if(point_distance(start_x, start_y, ret[j][1], ret[j][2]) > point_distance(start_x, start_y, inter_ret[1], inter_ret[2])){
+					// this spawn is not valid;	
+					flag1 = 1;
+				}
+			}	
+			if(flag0 == 0 and flag1 == 0){
+				// valid spawn;	
+				obj.viable_spawns[sp] = 1;
+			} else {
+				// invalid spawn;	
+				obj.viable_spawns[sp] = 0;
+			}
+		}
+	}
+	
 	delete pt_vec_candidates;
 	delete vec_a;
 	delete vec_b;
+	delete obj;
 	delete lines_to_check;
 	return ret;
 }
