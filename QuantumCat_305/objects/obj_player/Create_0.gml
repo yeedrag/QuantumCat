@@ -2,7 +2,7 @@
 // You can write your code in this editor
 // x vars
 x_move_spd = 3;
-
+global.fovsurface = -1;
 // y vars
 y_move_spd = 0;
 jump_height = 5; 

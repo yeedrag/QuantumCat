@@ -177,27 +177,72 @@ function draw_sight_v2(instance, view_distance, view_angle, start_x, start_y, fa
 	//}
 	//surface_set_target(fovsurface);
 	
+<<<<<<< Updated upstream
 	//gpu_set_blendmode(bm_add);
 	//----------------------------------------------------------------------------------------------------
 	for(var i = 0; i < array_length(pt_vec_candidates); i++){
+=======
+	array_push(pt_vec_candidates, vec_b); // two sides
+	
+	var cand_length = array_length(pt_vec_candidates);
+	
+	pre_inter_x = -9999999;
+	pre_inter_y = -9999999;
+	
+	
+	surf_x = obj_camera.cx;
+	surf_y = obj_camera.cy;
+	if( !surface_exists(global.fovsurface) ){
+		global.fovsurface = surface_create(window_get_width(),window_get_height());
+	} 
+	surface_set_target(global.fovsurface);
+	draw_set_alpha(0.95);
+	draw_set_color(c_black);
+	draw_rectangle(0,0,obj_camera.c_width,obj_camera.c_height,false);
+	for(var i = 0; i < cand_length; i++){
+>>>>>>> Stashed changes
 		var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[i], lines_to_check);
 		if(inter_ret[1] >= 1000000) {
 			continue;
 		}
+<<<<<<< Updated upstream
 		//draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
 		//draw_circle(inter_ret[1], inter_ret[2],5,false);
 		if(i >= 1) {
 			draw_set_color(c_white)
 			draw_set_alpha(0.5);
 			draw_triangle( start_x, start_y, pre_inter_x, pre_inter_y, inter_ret[1], inter_ret[2], false);
+=======
+		if(inter_obj != NaN){
+			inter_obj.is_seen = true;	
+		}
+		draw_line(start_x, start_y, inter_ret[1], inter_ret[2]);	
+		//draw_text(inter_ret[1], inter_ret[2], i+1);
+		//draw_circle(inter_ret[1], inter_ret[2], 1, false);		
+		if(i >= 1 and pre_inter_x != -9999999) {
+			gpu_set_blendmode(bm_subtract);
+			//gpu_set_blendmode_ext()
+			draw_set_alpha(1);
+			//draw_set_color(make_color_rgb(255,255,255));
+			draw_circle(obj_player.x - surf_x, obj_player.y - surf_y-16,15,false);
+			draw_triangle(start_x-surf_x, start_y-surf_y, pre_inter_x-surf_x, pre_inter_y-surf_y, inter_ret[1]-surf_x, inter_ret[2]-surf_y, false);	
+			draw_set_alpha(0.75);
+			draw_circle(obj_player.x - surf_x, obj_player.y - surf_y-16,20,false);
+			
+			
+			
+			
+			
+			draw_set_alpha(1);
+>>>>>>> Stashed changes
 		}
 		pre_inter_x = inter_ret[1];
 		pre_inter_y = inter_ret[2];	
 	}
-	draw_set_alpha(1);
-	//gpu_set_blendenable(bm_normal);
-	//surface_reset_target();
-
+	gpu_set_blendmode(bm_normal);
+	draw_self();
+	surface_reset_target();
+	draw_surface(global.fovsurface,surf_x,surf_y);
 	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_line(start_x, start_y, start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y);
 	//for(var i = 0; i < array_length(pt_vec_candidates); i++) draw_text(start_x + pt_vec_candidates[i]._x, start_y + pt_vec_candidates[i]._y, i);
 	//show_debug_message(array_length(pt_vec_candidates))
