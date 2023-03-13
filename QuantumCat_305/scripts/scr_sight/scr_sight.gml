@@ -5,7 +5,7 @@ function draw_all_vertices(){
 	}
 }
 
-function vec_coord(ppt_x, ppt_y, instance = noone, origin_pt_x = NaN, origin_pt_y = NaN, quantum_idx = NaN) constructor{
+function vec_coord(ppt_x, ppt_y, instance = noone, origin_pt_x = NaN, origin_pt_y = NaN) constructor{
     _x = ppt_x;
     _y = ppt_y;
 	_id = instance; // to keep track of object because of sorting 
