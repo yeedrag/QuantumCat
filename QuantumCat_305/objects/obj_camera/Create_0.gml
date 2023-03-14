@@ -24,6 +24,9 @@ min_view_y = 99999;
 max_view_x = -99999;
 max_view_y = -99999;
 update_room_bound = function(){
+	/*
+		Changes room view bound according to the min, max x and y from the outer vertices.
+	*/
 	for(var i = 0; i < instance_number(obj_vertex); i++){	
 		var vertex = instance_find(obj_vertex, i);
 		min_view_x = min(min_view_x, min(vertex.vertices_pos[0][0] + vertex.x, vertex.vertices_pos[1][0] + vertex.x) - 31);

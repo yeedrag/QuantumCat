@@ -7,15 +7,25 @@
 */
 event_inherited()
 
-alarm[0] = 100;
+warp_time = 100; // How many ticks until warp event happens
+alarm[0] = warp_time; 
 
-spawns = [];
+spawns = []; // Possible spawns for the object to warp to. Each spawn should be [x,y].
 
-viable_spawns = [];
+viable_spawns = []; // Show whether a spawn is seen or not this frame. a[i] = 1 means that spawn i is viable, and 0 means that is is not viable.
 
-bounds = [];
+bounds = []; // The bounds of the object made from all the vertices and spawns, should be loaded with load_quantum_bounds.
 
 load_quantum_bounds = function(spawns){
+	/*
+		Loads all the bounding boxes from every possible spawn.
+		Params : 
+			spawns : the spawns array the belongs to the object.
+		Returns :
+			An array consisting of all the bounding lines.
+			Type is vec_coord: [x_length relative to origin_point_x, y_length relative to origin_point_y, object_id, origin_point_x, origin_point_y].
+	
+	*/
 	var quantum_bounds = []
 	var num_vertices = self.num_vertices;
 	for(var sp = 0; sp < array_length(self.spawns); sp++){
@@ -38,6 +48,12 @@ load_quantum_bounds = function(spawns){
 	return quantum_bounds; 
 }
 warp_pos = function(){
+	/*
+		Warps object to one of the viable spawns if object is not being seen and is ready to warp.
+		
+		Chooses a spawn that the object will not be seen when teleported to, won't collide with player and other objects when warp to, 
+		and is currently not in contact with the player.	
+	*/
 	var perm = [];
 	for(var i = 0; i < array_length(spawns); i++){
 		array_push(perm,i);	
@@ -57,7 +73,5 @@ warp_pos = function(){
 				}
 			}				
 		}
-		// check if collide
-
 	}
 }

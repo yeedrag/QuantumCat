@@ -21,14 +21,14 @@ function vec_coord(ppt_x, ppt_y, instance = noone, origin_pt_x = NaN, origin_pt_
 
 function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
 	
-	var face_vec = new vec_coord(facing_vector_x, facing_vector_y); // 也許可以改成輸入時就是vec_coord 
+	var face_vec = new vec_coord(facing_vector_x, facing_vector_y, noone, start_x, start_y); // 也許可以改成輸入時就是vec_coord 
 	
-	var bound_vec_a_x = cord_rotate(face_vec._x, face_vec._y, view_angle / 2)[0];
-	var bound_vec_a_y = cord_rotate(face_vec._x, face_vec._y, view_angle / 2)[1];
+	var bound_vec_a_x = coord_rotate(face_vec._x, face_vec._y, view_angle / 2)[0];
+	var bound_vec_a_y = coord_rotate(face_vec._x, face_vec._y, view_angle / 2)[1];
 	vec_a = new vec_coord(bound_vec_a_x, bound_vec_a_y); // 下面那條
 	
-	var bound_vec_b_x = cord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[0];
-	var bound_vec_b_y = cord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[1]; // is vector!
+	var bound_vec_b_x = coord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[0];
+	var bound_vec_b_y = coord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[1]; // is vector!
 	vec_b = new vec_coord(bound_vec_b_x, bound_vec_b_y); // 上面那條
 	
 	pt_vec_candidates = []; // array to put in point candidates to sort later, is vector though!
@@ -63,8 +63,8 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 				// in sight;	
 				var pt = new vec_coord(obj.vertices_pos[j][0] + obj.x - start_x, obj.vertices_pos[j][1] + obj.y - start_y);
 				array_push(pt_vec_candidates, pt);
-				var pt_r1 = new vec_coord(cord_rotate(pt._x, pt._y, 0.0001)[0], cord_rotate(pt._x, pt._y, 0.0001)[1]);
-				var pt_r2 = new vec_coord(cord_rotate(pt._x, pt._y, -0.0001)[0], cord_rotate(pt._x, pt._y, -0.0001)[1]);
+				var pt_r1 = new vec_coord(coord_rotate(pt._x, pt._y, 0.0001)[0], coord_rotate(pt._x, pt._y, 0.0001)[1]);
+				var pt_r2 = new vec_coord(coord_rotate(pt._x, pt._y, -0.0001)[0], coord_rotate(pt._x, pt._y, -0.0001)[1]);
 				array_push(pt_vec_candidates, pt_r1);
 				array_push(pt_vec_candidates, pt_r2);
 				delete pt;

@@ -1,7 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function cord_rotate(pt_x, pt_y, theta){
-	// rotate clockwise!
+function coord_rotate(pt_x, pt_y, theta){
+	/*
+		Rotates coordinate by theta radians clockwise.
+		Params:
+			pt_x : X value of the coordinate.
+			pt_y : Y value of the coordinate.
+			theta : Radian to rotate the coordinate.
+		Returns:
+			ret : An array of size 2 as [x',y'].
+	*/
 	var ret;
 	ret[0] = pt_x * cos(theta) - pt_y * sin(theta);
 	ret[1] = pt_x * sin(theta) + pt_y * cos(theta);
@@ -9,6 +17,17 @@ function cord_rotate(pt_x, pt_y, theta){
 }
 
 function line_angle_diff(x1, y1, x2, y2){ // input must be vectors!
+	/*
+		Computes the angle difference between two vectors.
+		Params:
+			x1 : X vector of vector 1.
+			y1 : Y vector of vector 1.
+			x2 : X vector of vector 2.
+			y2 : Y vector of vector 2.
+		Returns:
+			The angle difference between the two vectors [x1,y1],[x2,y2],
+			is in radian!
+			*/
 	var dr_prt = dot_product(x1, y1, x2, y2);
 	var len1 = sqrt(sqr(x1) + sqr(y1));
 	var len2 = sqrt(sqr(x2) + sqr(y2));
@@ -56,6 +75,13 @@ function get_closest_intersection(start_x, start_y, ray, seg_candidates, close_d
 }
 
 function array_shuffle(_array) {
+	/*
+		Random shuffles an array.
+		Params:
+			_array : the array to be shuffled with.
+		Returns:
+			_array : the shuffled array.
+	*/
 	var _len = array_length(_array), _last = 0, _i = 0;
 	while(_len) {
 		_i = irandom(--_len);
