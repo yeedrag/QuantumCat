@@ -139,7 +139,6 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 				obj.viable_spawns[sp] = 0;
 			}
 		}
-		show_debug_message(flag0==flag1)
 	}
 	
 	delete pt_vec_candidates;
@@ -151,8 +150,9 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 
 function draw_sight(start_x, start_y, sight_polygons){
 	c = [c_red,c_orange,c_yellow,c_green,c_blue,c_purple];
-	for(var i = 0; i < 6; i++){
-		draw_line_color(start_x,start_y,start_x + camera_vertex[i][0] * 30,start_y + camera_vertex[i][1] * 30 ,c[i],c[i]);	
+	for(var i = 0; i < array_length(camera_idx); i++){
+		draw_line_colour(start_x,start_y,start_x + 3000*(camera_vertex[camera_idx[i]][0]-start_x),start_y + 3000*(camera_vertex[camera_idx[i]][1]-start_y),c[i],c[i])	
+		
 	}
 	pre_inter_x = -99999999;
 	pre_inter_y = -99999999;
@@ -167,9 +167,7 @@ function draw_sight(start_x, start_y, sight_polygons){
 	draw_set_alpha(1);
 }
 
-
 function get_shadow_polygon(view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
-	
 	var face_vec = new vec_coord(facing_vector_x, facing_vector_y, noone, start_x, start_y);
 	var bound_vec_a_x = coord_rotate(face_vec._x, face_vec._y, view_angle / 2)[0];
 	var bound_vec_a_y = coord_rotate(face_vec._x, face_vec._y, view_angle / 2)[1];
@@ -180,11 +178,40 @@ function get_shadow_polygon(view_angle, start_x, start_y, facing_vector_x, facin
 	vec_b = new vec_coord(bound_vec_b_x, bound_vec_b_y);
 	
 	// 1. shadow out area out of sight cone
-	camera_vertex = [[vec_a._x, vec_a._y], [vec_b._x, vec_b._y], [obj_camera.cx - start_x, obj_camera.cy - start_y], [obj_camera.cx + obj_camera.c_width - start_x, obj_camera.cy - start_y], [obj_camera.cx - start_x, obj_camera.cy + obj_camera.c_height - start_y], [obj_camera.cx + obj_camera.c_width - start_x, obj_camera.cy + obj_camera.c_height - start_y]];
-	array_sort(camera_vertex, function(elm_1, elm_2){
+
+	camera_vertex = [[vec_a._x + start_x, vec_a._y + start_y], [vec_b._x + start_x, vec_b._y + start_y], [obj_camera.cx, obj_camera.cy], [obj_camera.cx + obj_camera.c_width, obj_camera.cy], [obj_camera.cx, obj_camera.cy + obj_camera.c_height], [obj_camera.cx + obj_camera.c_width, obj_camera.cy + obj_camera.c_height]];
+	
+	show_debug_message(start_x)
+
+	array_sort(camera_vertex, function(e1, e2){
 		// sort angle from line b;
-		return arctan2(elm_1[1] - vec_b._y, elm_1[0] - vec_b._x) < arctan2(elm_2[1] - vec_b._y, elm_2[0] - vec_b._x); // polar angle sort with b as base
+		elm_1 = [e1[0],e1[1]];
+		elm_2 = [e2[0],e2[1]];
+		var start_x = obj_player.eye_x, start_y = obj_player.eye_y;
+		return point_direction(start_x, start_y, elm_1[0], elm_1[1]) > point_direction(start_x, start_y, elm_2[0], elm_2[1]);
 	});
-	show_debug_message(camera_vertex);
+	camera_shadow_vertex = [];
+	camera_idx = [];
+
+	for(var i = 0; i < 6; i++){
+		if(camera_vertex[i][0] == vec_b._x + start_x and camera_vertex[i][1] == vec_b._y + start_y){ // find vertex b;
+			show_debug_message([vec_b._x + start_x, vec_b._y + start_y]);
+			show_debug_message([vec_a._x + start_x, vec_a._y + start_y]);
+			var idx = i;
+			array_push(camera_shadow_vertex, camera_vertex[idx]);
+			array_push(camera_idx,idx);
+			idx = (idx+1) == 6 ? 0 : (idx+1);
+			while(camera_vertex[idx][0] != vec_b._x + start_x or camera_vertex[idx][1] != vec_b._y + start_y){
+				show_debug_message(idx)
+				array_push(camera_shadow_vertex, camera_vertex[idx]);
+				array_push(camera_idx,idx);
+				if(camera_vertex[idx][0] == vec_a._x + start_x and camera_vertex[idx][1] == vec_a._y + start_y){
+					break;
+				}
+				idx = (idx+1) == 6 ? 0 : (idx+1);
+			}
+			break;
+		}
+	}
 }
 
