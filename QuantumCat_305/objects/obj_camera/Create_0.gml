@@ -1,6 +1,9 @@
 
-c_width = 480
+c_width = 480;
 c_height = 270;
+
+cx = -1;
+cy = -1;
 
 // create camera obj
 var myCam = camera_create_view(0, 0, 0, 0);

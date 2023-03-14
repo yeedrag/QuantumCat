@@ -30,7 +30,6 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 	var bound_vec_b_x = coord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[0];
 	var bound_vec_b_y = coord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[1]; // is vector!
 	vec_b = new vec_coord(bound_vec_b_x, bound_vec_b_y); // 上面那條
-	
 	pt_vec_candidates = []; // array to put in point candidates to sort later, is vector though!
 	
 	lines_to_check = [];
@@ -140,17 +139,21 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 				obj.viable_spawns[sp] = 0;
 			}
 		}
+		show_debug_message(flag0==flag1)
 	}
 	
 	delete pt_vec_candidates;
 	delete vec_a;
-	delete vec_b;
 	delete obj;
 	delete lines_to_check;
 	return ret;
 }
 
 function draw_sight(start_x, start_y, sight_polygons){
+	c = [c_red,c_orange,c_yellow,c_green,c_blue,c_purple];
+	for(var i = 0; i < 6; i++){
+		draw_line_color(start_x,start_y,start_x + camera_vertex[i][0] * 30,start_y + camera_vertex[i][1] * 30 ,c[i],c[i]);	
+	}
 	pre_inter_x = -99999999;
 	pre_inter_y = -99999999;
 	for(var i = 0; i < array_length(sight_polygons); i++){
@@ -163,3 +166,25 @@ function draw_sight(start_x, start_y, sight_polygons){
 	}
 	draw_set_alpha(1);
 }
+
+
+function get_shadow_polygon(view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
+	
+	var face_vec = new vec_coord(facing_vector_x, facing_vector_y, noone, start_x, start_y);
+	var bound_vec_a_x = coord_rotate(face_vec._x, face_vec._y, view_angle / 2)[0];
+	var bound_vec_a_y = coord_rotate(face_vec._x, face_vec._y, view_angle / 2)[1];
+	vec_a = new vec_coord(bound_vec_a_x, bound_vec_a_y);
+	
+	var bound_vec_b_x = coord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[0];
+	var bound_vec_b_y = coord_rotate(face_vec._x, face_vec._y, -view_angle / 2)[1];
+	vec_b = new vec_coord(bound_vec_b_x, bound_vec_b_y);
+	
+	// 1. shadow out area out of sight cone
+	camera_vertex = [[vec_a._x, vec_a._y], [vec_b._x, vec_b._y], [obj_camera.cx - start_x, obj_camera.cy - start_y], [obj_camera.cx + obj_camera.c_width - start_x, obj_camera.cy - start_y], [obj_camera.cx - start_x, obj_camera.cy + obj_camera.c_height - start_y], [obj_camera.cx + obj_camera.c_width - start_x, obj_camera.cy + obj_camera.c_height - start_y]];
+	array_sort(camera_vertex, function(elm_1, elm_2){
+		// sort angle from line b;
+		return arctan2(elm_1[1] - vec_b._y, elm_1[0] - vec_b._x) < arctan2(elm_2[1] - vec_b._y, elm_2[0] - vec_b._x); // polar angle sort with b as base
+	});
+	show_debug_message(camera_vertex);
+}
+
