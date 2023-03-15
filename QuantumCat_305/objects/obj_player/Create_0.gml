@@ -16,7 +16,7 @@ depth = -1000
 */
 
 //create fov surface
-fovsurface = surface_create(window_get_width(),window_get_height());
+global.fovsurface = -1;
 
 
 // For jumping animation 

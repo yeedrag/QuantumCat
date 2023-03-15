@@ -149,22 +149,37 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 }
 
 function draw_sight(start_x, start_y, sight_polygons){
-	c = [c_red,c_orange,c_yellow,c_green,c_blue,c_purple];
-	for(var i = 0; i < array_length(camera_idx); i++){
-		draw_line_colour(start_x,start_y,start_x + 3000*(camera_vertex[camera_idx[i]][0]-start_x),start_y + 3000*(camera_vertex[camera_idx[i]][1]-start_y),c[i],c[i])	
-		
-	}
 	pre_inter_x = -99999999;
 	pre_inter_y = -99999999;
+	surf_x = obj_camera.cx;
+	surf_y = obj_camera.cy;
+	if(!surface_exists(global.fovsurface)){
+		global.fovsurface = surface_create(window_get_width(), window_get_height());
+	} 
+	surface_set_target(global.fovsurface);
+	draw_set_alpha(0.65);
+	draw_set_color(c_black);
+	draw_rectangle(0,0,obj_camera.c_width,obj_camera.c_height,false);
+
 	for(var i = 0; i < array_length(sight_polygons); i++){
         if(i >= 1 and pre_inter_x != -9999999) {
-			draw_set_alpha(0.25);
-            draw_triangle(start_x, start_y, pre_inter_x, pre_inter_y, sight_polygons[i][1], sight_polygons[i][2], false);
+			gpu_set_blendmode(bm_subtract);
+			//gpu_set_blendmode_ext()
+			draw_set_alpha(1);
+			//draw_set_color(make_color_rgb(255,255,255));
+			draw_circle(obj_player.x - surf_x, obj_player.y - surf_y-16,15,false);
+			draw_triangle(start_x-surf_x, start_y-surf_y, pre_inter_x-surf_x, pre_inter_y-surf_y, sight_polygons[i][1]-surf_x, sight_polygons[i][2]-surf_y, false);	
+			draw_set_alpha(0.75);
+			draw_circle(obj_player.x - surf_x, obj_player.y - surf_y-16,20,false);	
+			draw_set_alpha(1);
         }			
         pre_inter_x = sight_polygons[i][1];
         pre_inter_y = sight_polygons[i][2];    		
 	}
-	draw_set_alpha(1);
+	gpu_set_blendmode(bm_normal);
+	draw_self();
+	surface_reset_target();
+	draw_surface(global.fovsurface,surf_x,surf_y);
 }
 
 function get_shadow_polygon(view_angle, start_x, start_y, facing_vector_x, facing_vector_y){
