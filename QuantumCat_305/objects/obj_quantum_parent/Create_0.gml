@@ -7,7 +7,7 @@
 */
 event_inherited()
 
-warp_time = 100; // How many ticks until warp event happens
+warp_time = 5; // How many ticks until warp event happens
 alarm[0] = warp_time; 
 
 spawns = []; // Possible spawns for the object to warp to. Each spawn should be [x,y].
