@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings": [
+    {"name":"menu","order":14,"path":"folders/menu.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
     {"name":"obj_cam","order":7,"path":"folders/Objects/obj_cam.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -10,7 +11,6 @@
     {"name":"jump","order":5,"path":"folders/Sprites/spr_player/jump.yy",},
     {"name":"move","order":4,"path":"folders/Sprites/spr_player/move.yy",},
     {"name":"TileSets","order":13,"path":"folders/TileSets.yy",},
-    {"name":"menu","order":14,"path":"folders/menu.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_jump_ul","order":3,"path":"sprites/spr_player_jump_ul/spr_player_jump_ul.yy",},

@@ -5,7 +5,7 @@ half_height = camera_get_view_width(view_camera[0]) / 2;
 cx = obj_player.x - half_width;
 cy = obj_player.y - half_height;
 
-// You have to dicide the boundary of the camera by the following parameters
+// You have to decide the boundary of the camera by the following parameters
 
 
 cx = clamp(cx, min_view_x , max_view_x);
