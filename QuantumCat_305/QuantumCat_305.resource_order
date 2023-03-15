@@ -21,6 +21,7 @@
     {"name":"spr_tiles","order":1,"path":"sprites/spr_tiles/spr_tiles.yy",},
     {"name":"spr_player_jump_l","order":1,"path":"sprites/spr_player_jump_l/spr_player_jump_l.yy",},
     {"name":"TileSet2","order":2,"path":"tilesets/TileSet2/TileSet2.yy",},
+    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"spr_player_move_ul","order":3,"path":"sprites/spr_player_move_ul/spr_player_move_ul.yy",},
     {"name":"obj_player","order":3,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_quantum_parent","order":2,"path":"objects/obj_quantum_parent/obj_quantum_parent.yy",},
