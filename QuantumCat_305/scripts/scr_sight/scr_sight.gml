@@ -196,7 +196,7 @@ function get_shadow_polygon(view_angle, start_x, start_y, facing_vector_x, facin
 
 	camera_vertex = [[vec_a._x + start_x, vec_a._y + start_y], [vec_b._x + start_x, vec_b._y + start_y], [obj_camera.cx, obj_camera.cy], [obj_camera.cx + obj_camera.c_width, obj_camera.cy], [obj_camera.cx, obj_camera.cy + obj_camera.c_height], [obj_camera.cx + obj_camera.c_width, obj_camera.cy + obj_camera.c_height]];
 	
-	show_debug_message(start_x)
+	//show_debug_message(start_x)
 
 	array_sort(camera_vertex, function(e1, e2){
 		// sort angle from line b;
@@ -210,14 +210,14 @@ function get_shadow_polygon(view_angle, start_x, start_y, facing_vector_x, facin
 
 	for(var i = 0; i < 6; i++){
 		if(camera_vertex[i][0] == vec_b._x + start_x and camera_vertex[i][1] == vec_b._y + start_y){ // find vertex b;
-			show_debug_message([vec_b._x + start_x, vec_b._y + start_y]);
-			show_debug_message([vec_a._x + start_x, vec_a._y + start_y]);
+			//show_debug_message([vec_b._x + start_x, vec_b._y + start_y]);
+			//show_debug_message([vec_a._x + start_x, vec_a._y + start_y]);
 			var idx = i;
 			array_push(camera_shadow_vertex, camera_vertex[idx]);
 			array_push(camera_idx,idx);
 			idx = (idx+1) == 6 ? 0 : (idx+1);
 			while(camera_vertex[idx][0] != vec_b._x + start_x or camera_vertex[idx][1] != vec_b._y + start_y){
-				show_debug_message(idx)
+				//show_debug_message(idx)
 				array_push(camera_shadow_vertex, camera_vertex[idx]);
 				array_push(camera_idx,idx);
 				if(camera_vertex[idx][0] == vec_a._x + start_x and camera_vertex[idx][1] == vec_a._y + start_y){
