@@ -65,8 +65,7 @@ warp_pos = function(){
 				var spawn_x = spawns[perm[i]][0];
 				var spawn_y = spawns[perm[i]][1];
 				var player_collide = collision_rectangle(spawn_x, spawn_y, spawn_x + self.sprite_width, spawn_y + self.sprite_height, obj_player, false, false);
-				var solid_collide = collision_rectangle(spawn_x, spawn_y, spawn_x + self.sprite_width, spawn_y + self.sprite_height, obj_solid_parent, false, false);
-				if(player_collide == noone and solid_collide == noone and viable_spawns[perm[i]] == 1){
+				if(player_collide == noone and viable_spawns[perm[i]] == 1){
 					self.x = spawn_x;
 					self.y = spawn_y;
 					break;
