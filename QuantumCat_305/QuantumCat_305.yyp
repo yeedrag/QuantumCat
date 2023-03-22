@@ -27,7 +27,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"spr_player_jump_ul","path":"sprites/spr_player_jump_ul/spr_player_jump_ul.yy",},},
@@ -58,6 +58,7 @@
     {"id":{"name":"obj_vertex","path":"objects/obj_vertex/obj_vertex.yy",},},
     {"id":{"name":"spr_player_idle_d","path":"sprites/spr_player_idle_d/spr_player_idle_d.yy",},},
     {"id":{"name":"spr_player_jump_dl","path":"sprites/spr_player_jump_dl/spr_player_jump_dl.yy",},},
+    {"id":{"name":"spr_quan_wall","path":"sprites/spr_quan_wall/spr_quan_wall.yy",},},
     {"id":{"name":"title_menu","path":"objects/title_menu/title_menu.yy",},},
     {"id":{"name":"scr_sight","path":"scripts/scr_sight/scr_sight.yy",},},
     {"id":{"name":"spr_vertex","path":"sprites/spr_vertex/spr_vertex.yy",},},
@@ -67,6 +68,7 @@
     {"id":{"name":"spr_can","path":"sprites/spr_can/spr_can.yy",},},
     {"id":{"name":"spr_quan_test","path":"sprites/spr_quan_test/spr_quan_test.yy",},},
     {"id":{"name":"spr_player_move_l","path":"sprites/spr_player_move_l/spr_player_move_l.yy",},},
+    {"id":{"name":"obj_quan_wall","path":"objects/obj_quan_wall/obj_quan_wall.yy",},},
     {"id":{"name":"obj_can","path":"objects/obj_can/obj_can.yy",},},
     {"id":{"name":"spr_player_idle_r","path":"sprites/spr_player_idle_r/spr_player_idle_r.yy",},},
     {"id":{"name":"spr_player_idle_u","path":"sprites/spr_player_idle_u/spr_player_idle_u.yy",},},
