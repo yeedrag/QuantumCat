@@ -43,6 +43,7 @@ sight_polygons = get_sight_polygon(id, view_distance,view_angle,eye_x,eye_y,x_lo
 get_shadow_polygon(view_angle,eye_x,eye_y,x_look,y_look);
 apply_movement(x_move_dir, y_move_dir, x_look, y_look);
 
+show_debug_message(y)
 
 
 

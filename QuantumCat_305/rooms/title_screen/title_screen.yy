@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "title_screen",
-  "creationCodeFile": "",
+  "creationCodeFile": "${project_dir}/rooms/title_screen/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

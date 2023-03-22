@@ -61,12 +61,13 @@ warp_pos = function(){
 	perm = array_shuffle(perm);
 	if(is_seen == false){
 		if(!place_meeting(self.x - sign(obj_player.x_move_dir), self.y, obj_player) and !place_meeting(self.x, self.y - sign(obj_player.y_move_dir) - 1, obj_player)){ // check if player is touching object
+	
 			for(var i = 0; i < array_length(spawns); i++){ 
 				var spawn_x = spawns[perm[i]][0];
 				var spawn_y = spawns[perm[i]][1];
 				var player_collide = collision_rectangle(spawn_x, spawn_y, spawn_x + self.sprite_width, spawn_y + self.sprite_height, obj_player, false, false);
-				var solid_collide = collision_rectangle(spawn_x, spawn_y, spawn_x + self.sprite_width, spawn_y + self.sprite_height, obj_solid_parent, false, false);
-				if(player_collide == noone and solid_collide == noone and viable_spawns[perm[i]] == 1){
+				if(player_collide == noone and viable_spawns[perm[i]] == 1){
+					show_debug_message(perm[i])
 					self.x = spawn_x;
 					self.y = spawn_y;
 					break;
