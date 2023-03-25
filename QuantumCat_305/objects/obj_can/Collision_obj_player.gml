@@ -1,3 +1,4 @@
 /// @description 説明をここに挿入
 // このエディターでコードを作成することができます
-room_goto_next();
+obj_transition.visible = true;
+obj_transition.image_speed = 1;
