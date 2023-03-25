@@ -27,7 +27,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"spr_player_jump_ul","path":"sprites/spr_player_jump_ul/spr_player_jump_ul.yy",},},
@@ -59,6 +59,7 @@
     {"id":{"name":"spr_player_jump_dl","path":"sprites/spr_player_jump_dl/spr_player_jump_dl.yy",},},
     {"id":{"name":"title_menu","path":"objects/title_menu/title_menu.yy",},},
     {"id":{"name":"scr_sight","path":"scripts/scr_sight/scr_sight.yy",},},
+    {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
     {"id":{"name":"spr_vertex","path":"sprites/spr_vertex/spr_vertex.yy",},},
     {"id":{"name":"spr_player_jump_d","path":"sprites/spr_player_jump_d/spr_player_jump_d.yy",},},
     {"id":{"name":"title_screen","path":"rooms/title_screen/title_screen.yy",},},
@@ -77,6 +78,7 @@
     {"id":{"name":"spr_player_move_ur","path":"sprites/spr_player_move_ur/spr_player_move_ur.yy",},},
     {"id":{"name":"spr_tile_key","path":"sprites/spr_tile_key/spr_tile_key.yy",},},
     {"id":{"name":"main_font","path":"fonts/main_font/main_font.yy",},},
+    {"id":{"name":"transition","path":"sprites/transition/transition.yy",},},
     {"id":{"name":"spr_player_idle_l","path":"sprites/spr_player_idle_l/spr_player_idle_l.yy",},},
     {"id":{"name":"spr_player_jump_dr","path":"sprites/spr_player_jump_dr/spr_player_jump_dr.yy",},},
     {"id":{"name":"spr_player_sleep","path":"sprites/spr_player_sleep/spr_player_sleep.yy",},},

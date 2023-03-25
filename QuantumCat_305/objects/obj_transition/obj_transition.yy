@@ -1,15 +1,12 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_can",
-<<<<<<< Updated upstream
-  "eventList": [],
-=======
+  "name": "obj_transition",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
->>>>>>> Stashed changes
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -17,7 +14,7 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
-  "persistent": false,
+  "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
@@ -33,9 +30,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_can",
-    "path": "sprites/spr_can/spr_can.yy",
+    "name": "transition",
+    "path": "sprites/transition/transition.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
