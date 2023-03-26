@@ -18,7 +18,6 @@ depth = -1000
 //create fov surface
 global.fovsurface = -1;
 
-
 // For jumping animation 
 frame_cntr_1 = 0; // Frame counter for jumping up
 frame_cntr_2 = 0;// Frame counter for falling down
