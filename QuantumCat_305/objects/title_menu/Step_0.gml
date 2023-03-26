@@ -28,7 +28,7 @@ if(accept_key){
                 case 2 : game_end(); break;
             }
             break;
-        //settins
+        //settings
         case 1:
             switch(pos){
 
