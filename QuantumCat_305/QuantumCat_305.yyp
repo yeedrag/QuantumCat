@@ -74,7 +74,6 @@
     {"id":{"name":"obj_can","path":"objects/obj_can/obj_can.yy",},},
     {"id":{"name":"spr_player_idle_r","path":"sprites/spr_player_idle_r/spr_player_idle_r.yy",},},
     {"id":{"name":"spr_player_idle_u","path":"sprites/spr_player_idle_u/spr_player_idle_u.yy",},},
-    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"id":{"name":"spr_player_jump_r","path":"sprites/spr_player_jump_r/spr_player_jump_r.yy",},},
     {"id":{"name":"background","path":"sprites/background/background.yy",},},
     {"id":{"name":"obj_pre_transition","path":"objects/obj_pre_transition/obj_pre_transition.yy",},},
@@ -90,11 +89,10 @@
     {"id":{"name":"spr_player_sleep","path":"sprites/spr_player_sleep/spr_player_sleep.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
     {"roomId":{"name":"title_screen","path":"rooms/title_screen/title_screen.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
-    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
+    {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
