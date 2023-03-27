@@ -121,7 +121,7 @@ function get_sight_polygon(instance, view_distance, view_angle, start_x, start_y
 				}	
 			}
 			var qbounds = obj.bounds;
-			for(var j = 0; j < cand_length; j++){ 
+			for(var j = 0; j < array_length(ret); j++){ 
 				var inter_ret = get_closest_intersection(start_x, start_y, pt_vec_candidates[j], qbounds[sp]);
 		        if(inter_ret[1] >= 1000000) {
 		            continue;

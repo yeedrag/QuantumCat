@@ -5,7 +5,7 @@ x_move_spd = 3;
 
 // y vars
 y_move_spd = 0;
-jump_height = 5; 
+jump_height = 6.2; 
 grav = 0.3;
 depth = -1000
 // draw
