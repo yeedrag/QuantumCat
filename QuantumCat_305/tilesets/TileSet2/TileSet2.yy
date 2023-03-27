@@ -70,7 +70,7 @@
   "tileAnimationSpeed": 15.0,
   "tileHeight": 32,
   "tilehsep": 1,
-  "tilevsep": 0,
+  "tilevsep": 1,
   "tileWidth": 32,
   "tilexoff": 0,
   "tileyoff": 0,

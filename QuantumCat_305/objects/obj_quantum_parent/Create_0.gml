@@ -60,7 +60,7 @@ warp_pos = function(){
 	}
 	perm = array_shuffle(perm);
 	if(is_seen == false){
-		if(!place_meeting(self.x - sign(obj_player.x_move_dir), self.y, obj_player) and !place_meeting(self.x, self.y - sign(obj_player.y_move_dir) - 1, obj_player)){ // check if player is touching object
+		if(!place_meeting(self.x - sign(obj_player.x_move_dir), self.y, obj_player)){ // check if player is touching object
 			for(var i = 0; i < array_length(spawns); i++){ 
 				var spawn_x = spawns[perm[i]][0];
 				var spawn_y = spawns[perm[i]][1];

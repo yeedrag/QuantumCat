@@ -12,8 +12,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "obj_unmovable_parent",
-    "path": "objects/obj_unmovable_parent/obj_unmovable_parent.yy",
+    "name": "obj_solid_parent",
+    "path": "objects/obj_solid_parent/obj_solid_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -35,5 +35,5 @@
     "path": "sprites/spr_vertex/spr_vertex.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

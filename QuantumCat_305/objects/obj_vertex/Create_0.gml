@@ -3,4 +3,3 @@
 event_inherited();
 vertices_pos = [[-1,-1],[31,-1]];
 vertices_pos = v_transform(vertices_pos);
-image_alpha = 0;
