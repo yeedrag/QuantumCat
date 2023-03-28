@@ -5,7 +5,7 @@ x_move_spd = 3;
 
 // y vars
 y_move_spd = 0;
-jump_height = 6.2; 
+jump_height = 6.1; 
 grav = 0.3;
 depth = -1000
 // draw
@@ -17,6 +17,7 @@ depth = -1000
 
 //create fov surface
 global.fovsurface = -1;
+
 
 // For jumping animation 
 frame_cntr_1 = 0; // Frame counter for jumping up
@@ -91,7 +92,7 @@ function update_sprite(x_move_dir, y_move_dir, is_grounded, y_move_spd, pressed_
 			frame_cntr_1 = 0;
 		}
 		frame_cntr_1 += 1;
-	} else if(in_y_jumping){
+	} else if(sprite_index == jump_sprite){
 		// grounded animations;	
 		if(frame_cntr_2 == 3){			
 			if(image_index != 6) image_index += 1;

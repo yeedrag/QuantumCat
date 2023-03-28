@@ -14,6 +14,7 @@ var look_left = keyboard_check(vk_left);
 var look_right = keyboard_check(vk_right);
 var look_up = keyboard_check(vk_up);
 var look_down = keyboard_check(vk_down);
+
 x_look = 1 * image_xscale;
 y_look = 0;
 
