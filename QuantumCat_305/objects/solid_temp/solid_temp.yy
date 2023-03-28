@@ -1,10 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_quan_room4",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "solid_temp",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -12,8 +10,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "obj_quantum_parent",
-    "path": "objects/obj_quantum_parent/obj_quantum_parent.yy",
+    "name": "obj_solid_parent",
+    "path": "objects/obj_solid_parent/obj_solid_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_quan_red",
-    "path": "sprites/spr_quan_red/spr_quan_red.yy",
+    "name": "spr_temp",
+    "path": "sprites/spr_temp/spr_temp.yy",
   },
   "spriteMaskId": null,
   "visible": true,
