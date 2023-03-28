@@ -52,6 +52,7 @@
     {"id":{"name":"spr_player_move_d","path":"sprites/spr_player_move_d/spr_player_move_d.yy",},},
     {"id":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
     {"id":{"name":"spr_player_idle_dl","path":"sprites/spr_player_idle_dl/spr_player_idle_dl.yy",},},
+    {"id":{"name":"TileSet3","path":"tilesets/TileSet3/TileSet3.yy",},},
     {"id":{"name":"Room0","path":"rooms/Room0/Room0.yy",},},
     {"id":{"name":"spr_player_jump_u","path":"sprites/spr_player_jump_u/spr_player_jump_u.yy",},},
     {"id":{"name":"spr_player_idle_dr","path":"sprites/spr_player_idle_dr/spr_player_idle_dr.yy",},},

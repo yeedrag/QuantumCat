@@ -32,6 +32,7 @@
     {"name":"spr_player_move_d","order":5,"path":"sprites/spr_player_move_d/spr_player_move_d.yy",},
     {"name":"Room4","order":3,"path":"rooms/Room4/Room4.yy",},
     {"name":"spr_player_idle_dl","order":7,"path":"sprites/spr_player_idle_dl/spr_player_idle_dl.yy",},
+    {"name":"TileSet3","order":4,"path":"tilesets/TileSet3/TileSet3.yy",},
     {"name":"Room0","order":4,"path":"rooms/Room0/Room0.yy",},
     {"name":"spr_player_jump_u","order":2,"path":"sprites/spr_player_jump_u/spr_player_jump_u.yy",},
     {"name":"spr_player_idle_dr","order":3,"path":"sprites/spr_player_idle_dr/spr_player_idle_dr.yy",},
