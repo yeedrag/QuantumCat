@@ -1,4 +1,3 @@
-
 c_width = 480;
 c_height = 270;
 
