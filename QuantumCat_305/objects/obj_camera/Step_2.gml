@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 half_width = camera_get_view_width(view_camera[0]) / 2;
-half_height = camera_get_view_width(view_camera[0]) / 2;
+half_height = camera_get_view_height(view_camera[0]) / 2;
 if(room_get_name(room)=="title_screen") {
 	cx=0;cy=0;
 }else {
